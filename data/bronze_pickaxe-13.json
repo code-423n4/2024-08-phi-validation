@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "bronze_pickaxe",
+  "risk": "2",
+  "title": "Users can not claim art reward if the recipient is a contract",
+  "issueId": 13,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/13"
+}
