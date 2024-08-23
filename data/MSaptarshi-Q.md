@@ -14,3 +14,16 @@ So in some chains these limits will be set shorter than expected.
 Like Berachain, where protocol is going to be deployed has 5s block time according to its [documentation](https://docs.berachain.com/faq/#how-well-does-berachain-perform).
 ## Recommendation
 Set the time limits with proper validation accordingly to all the chains the codebase is deployed
+
+# [L-02] Signature reuse across different chains
+https://github.com/code-423n4/2024-08-phi/blob/8c0985f7a10b231f916a51af5d506dd6b0c54120/src/abstract/RewardControl.sol#L146
+Because the chain ID is not included in the `structhash`, all signatures are also valid when the project is launched on a chain with another chain ID. For instance, when it is also launched on Polygon. An attacker can now use all of the Ethereum signatures there. Because the Polygon addresses of user's (and potentially contracts, when the nonces for creating are the same) are often identical.so users can use other users signature to withdraw their funds on another chain
+```
+
+        bytes32 structHash = keccak256(abi.encode(WITHDRAW_TYPEHASH, from, to, amount, nonce, deadline));
+        bytes32 digest = _hashTypedData(structHash);
+        return SignatureCheckerLib.isValidSignatureNowCalldata(from, digest, sig);
+    }
+```
+## Recommendation
+Include The chain ID in the signature hash
