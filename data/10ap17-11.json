@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "10ap17",
+  "risk": "2",
+  "title": "Users can be griefed by malliscous users that can front run the call to `by cred`",
+  "issueId": 11,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/11"
+}
