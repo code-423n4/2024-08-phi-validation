@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "debo",
+  "risk": "2",
+  "title": "Cred contract has Multiple Calls in a Single Transaction in function getBatchSellPrice",
+  "issueId": 15,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/15"
+}
