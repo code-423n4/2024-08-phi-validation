@@ -173,18 +173,22 @@ function _validateAndCalculateBatch(
 ```
 # Informational
 
-## Informational 01: Wrong function documentation
+## Informational 01: Everyone can buy shares to anyone
+
+Currently the lock period is only 10 minutes. But if the period increase to weeks, months in the future, malicious user can mint single share to someone and lock all of the funds.
+
+## Informational 02: Wrong function documentation
 
 In `RewardControl::depositBatch` it is stated that `reasons` is optional, but this is not quite true, because the function validates does the function have equal number of params as recepients. 
 
-## Informational 02: Adjust documentation in `BondingCurve`
+## Informational 03: Adjust documentation in `BondingCurve`
 
 In `BondingCurve` on several places there is missing documentation.
 
 1. `getPrice` and `getPriceData` are missing documentation
 2. For both functions `getBuyPriceAfterFee` and `getSellPriceAfterFee` documentation is missing for the param `credId`
 
-## Informational 03: Missing documentation in `PhiNFT1155`
+## Informational 04: Missing documentation in `PhiNFT1155`
 
 Documentation is missing on several places. I will describe them one by one below.
 
