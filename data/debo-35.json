@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "debo",
+  "risk": "3",
+  "title": "Reward control has unprotected Ether Withdrawal on withdraw function",
+  "issueId": 35,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/35"
+}
