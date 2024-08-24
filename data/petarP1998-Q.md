@@ -106,7 +106,7 @@ if ((msg.value - artFee) > 0) {
 
 ```
 
-## Recommendation
+### Recommendation
 
 Add this to the begging of `PhiFactory::createArt`:
 
@@ -134,6 +134,43 @@ function createArt(
     }
 ```
 
+## Low 07: In `_validateAndCalculateBatch` missing check for priceLimits_
+
+In `_validateAndCalculateBatch` there is a missing check, does the length of `priceLimits_` equal to `amounts` and `creds` length. 
+
+### Recommendation
+
+Add this block of code to `_validateAndCalculateBatch`
+
+```diff
+function _validateAndCalculateBatch(
+        uint256[] calldata credIds_,
+        uint256[] calldata amounts_,
+        uint256[] calldata priceLimits_,
+        bool isBuy
+    )
+        internal
+        view
+        returns (
+            uint256 totalAmount,
+            uint256[] memory prices,
+            uint256[] memory protocolFees,
+            uint256[] memory creatorFees
+        )
+    {
+        uint256 length = credIds_.length;
++       if (length != priceLimits_.length) {
++           revert InvalidArrayLength();
++       }
+        
+        if (length != amounts_.length) {
+            revert InvalidArrayLength();
+        }
+
+        if (length == 0) {
+            revert EmptyBatchOperation();
+        }
+```
 # Informational
 
 ## Informational 01: Wrong function documentation
