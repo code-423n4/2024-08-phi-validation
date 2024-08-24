@@ -9,7 +9,7 @@ This omission can lead to unnecessary gas consumption when users inadvertently o
 
 ### Details
 
-In the function `handleRewardsAndGetValueSent`, the `quantity_{ parameter is used to calculate reward distributions and to determine the total deposit amount. However, there is no validation to ensure that `quantity_` is greater than zero before these calculations and the subsequent execution of the `depositRewards` function.
+In the function `handleRewardsAndGetValueSent`, the `quantity_` parameter is used to calculate reward distributions and to determine the total deposit amount. However, there is no validation to ensure that `quantity_` is greater than zero before these calculations and the subsequent execution of the `depositRewards` function.
 
 Allowing a zero `quantity_` leads to the following issues:
 
