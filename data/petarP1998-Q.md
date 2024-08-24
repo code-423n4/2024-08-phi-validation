@@ -171,6 +171,60 @@ function _validateAndCalculateBatch(
             revert EmptyBatchOperation();
         }
 ```
+
+
+## Low 08: Logic in `_executeBatchTrade` can be simplified and reduce cost
+
+The second for cylce in `_executeBatchTrade` is depositing the reward to the `PhiReward`. This action can be added to first cycle instead of iterating second time. 
+
+### Recommendation
+
+You can change the code in the following way:
+
+```diff
+for (uint256 i = 0; i < credIds_.length; ++i) {
+            uint256 credId = credIds_[i];
+            uint256 amount = amounts_[i];
+
+            _updateCuratorShareBalance(credId, curator, amount, isBuy);
+
+            if (isBuy) {
+                creds[credId].currentSupply += amount;
+                lastTradeTimestamp[credId][curator] = block.timestamp;
+            } else {
+                if (block.timestamp <= lastTradeTimestamp[credId][curator] + SHARE_LOCK_PERIOD) { // audit-check blocking the position
+                    revert ShareLockPeriodNotPassed(
+                        block.timestamp, lastTradeTimestamp[credId][curator] + SHARE_LOCK_PERIOD
+                    );
+                }
+                creds[credId].currentSupply -= amount;
+            }
+
++            protocolFeeDestination.safeTransferETH(protocolFees[i]);
++            IPhiRewards(phiRewardsAddress).deposit{ value: creatorFees[i] }(
++                creds[credId].creator, bytes4(keccak256("CREATOR_ROYALTY_FEE")), ""
++            );
++            emit Royalty(creds[credId].creator, credId, creatorFees[i]);
+
++            emit Trade(curator, credId, isBuy, amounts_[i], prices[i], protocolFees[i], creds[credId].currentSupply);
+
++            creds[credId].latestActiveTimestamp = block.timestamp;
+        }
+
+-        for (uint256 i = 0; i < credIds_.length; ++i) {
+-            uint256 credId = credIds_[i];
+-
+-            protocolFeeDestination.safeTransferETH(protocolFees[i]);
+-            IPhiRewards(phiRewardsAddress).deposit{ value: creatorFees[i] }(
+-                creds[credId].creator, bytes4(keccak256("CREATOR_ROYALTY_FEE")), ""
+-            );
+-           emit Royalty(creds[credId].creator, credId, creatorFees[i]);
+
+-            emit Trade(curator, credId, isBuy, amounts_[i], prices[i], - protocolFees[i], creds[credId].currentSupply);
+-        }
+
+```
+
 # Informational
 
 ## Informational 01: Everyone can buy shares to anyone
@@ -181,14 +235,18 @@ Currently the lock period is only 10 minutes. But if the period increase to week
 
 In `RewardControl::depositBatch` it is stated that `reasons` is optional, but this is not quite true, because the function validates does the function have equal number of params as recepients. 
 
-## Informational 03: Adjust documentation in `BondingCurve`
+## Informational 03: whenNotPaused not needed
+
+In `Cred::_createCredInternal` the `whenNotPaused` modifier is not needed because it's already added to the `createCred`.
+
+## Informational 04: Adjust documentation in `BondingCurve`
 
 In `BondingCurve` on several places there is missing documentation.
 
 1. `getPrice` and `getPriceData` are missing documentation
 2. For both functions `getBuyPriceAfterFee` and `getSellPriceAfterFee` documentation is missing for the param `credId`
 
-## Informational 04: Missing documentation in `PhiNFT1155`
+## Informational 05: Missing documentation in `PhiNFT1155`
 
 Documentation is missing on several places. I will describe them one by one below.
 
