@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "jerseyjoewalcott",
+  "risk": "3",
+  "title": "Re-entrancy vulnerability on batchBuyShareCred()",
+  "issueId": 26,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/26"
+}
