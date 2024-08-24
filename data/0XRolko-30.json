@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "0XRolko",
+  "risk": "2",
+  "title": "Token with id `0` was restricted in the `PhiNFT1155::claimFromFactory` function, which blocks the claiming of art token.",
+  "issueId": 30,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/30"
+}
