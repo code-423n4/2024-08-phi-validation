@@ -1,23 +1,23 @@
 ## Issue Type
 Invalid Validation
 
-## Impact
-Detailed description of the impact of this finding.
-
+## Title
 Overloading `uri` Function in the PhiNFT1155 contract.
 
+## Links to affected code *
 ```url
 https://github.com/code-423n4/2024-08-phi/blob/8c0985f7a10b231f916a51af5d506dd6b0c54120/src/art/PhiNFT1155.sol#L234-L247
 ```
 
-#### Description:
+## Impact
+Detailed description of the impact of this finding.
+
 The contract defines two `uri` functions with different signatures:
 - `function uri(uint256 tokenId_) public view override returns (string memory)`
 - `function uri(uint256 tokenId_, address minter_) public view returns (string memory)`
 
 These functions perform similar tasks but differ in their parameters. This overloading could lead to confusion or unexpected behavior when the contract interacts with external systems or smart contracts that expect a single `uri` function. The overloaded function signature might result in calling the unintended function, especially if the function call is made through an interface that doesn't distinguish between the two signatures.
 
-#### Impact:
 The overloading of the `uri` function could cause unintended behavior or errors when interacting with the contract, especially in external systems or third-party smart contracts expecting only one version of the function. This is particularly problematic when those systems are not designed to handle overloaded functions, leading to potential mismatches in returned data and contract functionality.
 
 While this issue does not pose a direct security risk, it can cause functionality issues, leading to a degraded user experience or potential integration problems.
