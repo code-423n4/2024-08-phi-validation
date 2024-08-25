@@ -1,4 +1,9 @@
-### Title
+## Issue Type
+Invalid Validation
+
+## Impact
+Detailed description of the impact of this finding.
+
 ### 1. Overloading `uri` Function in the PhiNFT1155 contract.
 
 ```url
