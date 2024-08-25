@@ -4,13 +4,11 @@ Invalid Validation
 ## Impact
 Detailed description of the impact of this finding.
 
-### 1. Overloading `uri` Function in the PhiNFT1155 contract.
+Overloading `uri` Function in the PhiNFT1155 contract.
 
 ```url
 https://github.com/code-423n4/2024-08-phi/blob/8c0985f7a10b231f916a51af5d506dd6b0c54120/src/art/PhiNFT1155.sol#L234-L247
 ```
-
-- **Issue Type:** Invalid Validation: Functionality Bug / Interface Inconsistency
 
 #### Description:
 The contract defines two `uri` functions with different signatures:
