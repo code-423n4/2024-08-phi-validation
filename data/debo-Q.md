@@ -22,7 +22,7 @@ The overloading of the `uri` function could cause unintended behavior or errors 
 
 While this issue does not pose a direct security risk, it can cause functionality issues, leading to a degraded user experience or potential integration problems.
 
-#### Proof of Concept (PoC):
+## Proof of Concept
 
 Consider an external smart contract or system that interacts with this contract to fetch the URI of a token:
 
@@ -46,10 +46,10 @@ contract ExternalContract {
 
 Here, the external contract expects to interact with a single `uri` function. However, due to overloading, there is potential confusion on which `uri` function will be called, depending on how the interface resolves the overloaded signatures.
 
-#### Mitigation:
+## Mitigation:
 To mitigate this issue, the contract should be refactored to avoid overloading the `uri` function. Instead, consider using distinct function names that clearly indicate their purpose and expected parameters.
 
-##### Proposed Mitigation Code:
+Proposed Mitigation Code:
 
 ```solidity
 // Original overloaded function
