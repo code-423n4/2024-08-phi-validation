@@ -27,3 +27,15 @@ Because the chain ID is not included in the `structhash`, all signatures are als
 ```
 ## Recommendation
 Include The chain ID in the signature hash
+
+# [L-03] The ContractURI method does not check if the NFT has been minted and returns data for the contract that may be a fake NFT
+https://github.com/code-423n4/2024-08-phi/blob/8c0985f7a10b231f916a51af5d506dd6b0c54120/src/PhiFactory.sol#L64
+By invoking the Factory.tokenURI method for a maliciously provided NFT address, 
+```
+function uri(uint256 tokenId_) public view override returns (string memory) {
+        return phiFactoryContract.getTokenURI(_tokenIdToArtId[tokenId_]);
+    }
+```
+the returned data may deceive potential users, as the method will return data for a non-existent NFT id that appears to be a genuine PrivatePool. This can lead to a poor user experience or financial loss for users.
+## Recommendation
+Throw an error if the NFT address is invalid.
