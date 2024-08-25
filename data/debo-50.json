@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "debo",
+  "risk": "3",
+  "title": "RewardControl contract has Multiple Calls in a Single Transaction in withdrawWithSig function",
+  "issueId": 50,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/50"
+}
