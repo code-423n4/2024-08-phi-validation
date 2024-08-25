@@ -26,7 +26,7 @@ While this issue does not pose a direct security risk, it can cause functionalit
 
 Consider an external smart contract or system that interacts with this contract to fetch the URI of a token:
 
-```solidity
+```sol
 interface IPhiNFT1155 {
     function uri(uint256 tokenId_) external view returns (string memory);
 }
@@ -46,12 +46,15 @@ contract ExternalContract {
 
 Here, the external contract expects to interact with a single `uri` function. However, due to overloading, there is potential confusion on which `uri` function will be called, depending on how the interface resolves the overloaded signatures.
 
-## Mitigation:
+## Tools Used
+Manual review.
+
+## Recommended Mitigation Steps
 To mitigate this issue, the contract should be refactored to avoid overloading the `uri` function. Instead, consider using distinct function names that clearly indicate their purpose and expected parameters.
 
 Proposed Mitigation Code:
 
-```solidity
+```sol
 // Original overloaded function
 function uri(uint256 tokenId_, address minter_) public view returns (string memory) {
     if (bytes(advancedTokenURI[tokenId_][minter_]).length > 0) {
@@ -75,5 +78,4 @@ With this refactor:
 - The original `uri` function with the single `tokenId_` parameter remains unchanged.
 - The overloaded `uri` function is renamed to `minterSpecificURI`, clearly differentiating its purpose and eliminating the overloading issue.
 
-#### Conclusion:
 This proactive measure enhances the overall robustness and maintainability of the contract.
