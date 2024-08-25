@@ -225,6 +225,18 @@ for (uint256 i = 0; i < credIds_.length; ++i) {
 
 ```
 
+## Low 09: PhiNFT1155 can't be upgraded
+
+`PhiNFT1155` is upgradeable contract, but due to the current implementation it can't be updated, because it can be updated only by owner, in the current situation the owner is `PhiFactory` and there is no method which exposes the update function of the `PhiNFT1155`.
+
+### Impact
+
+Even if the admins of the protocol, want to update the `PhiNFT1155` this is impossible in the current implementation, leading to losing the opportunity to upgrade already deployed `PhiNFT1155`. 
+
+### Recommendation
+
+Expose a method in `PhiFactory` which can be used to call the update method of the `PhiNFT1155`.
+
 # Informational
 
 ## Informational 01: Everyone can buy shares to anyone
@@ -246,10 +258,6 @@ In `BondingCurve` on several places there is missing documentation.
 1. `getPrice` and `getPriceData` are missing documentation
 2. For both functions `getBuyPriceAfterFee` and `getSellPriceAfterFee` documentation is missing for the param `credId`
 
-## Informational 05: Missing documentation in `PhiNFT1155`
+## Informational 05: Minter should implement `onERC1155BatchReceived`
 
-Documentation is missing on several places. I will describe them one by one below.
-
-1. 
-
-2. 
+If the minter is contract it should implement `onERC1155BatchReceived` otherwise mint events will throw exception. 
