@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "TECHFUND-inc",
+  "risk": "2",
+  "title": "PhiFactory::batchClaim() switches the caller context from original caller to PhiFactory",
+  "issueId": 41,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/41"
+}
