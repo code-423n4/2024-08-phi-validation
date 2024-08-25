@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "TECHFUND-inc",
+  "risk": "3",
+  "title": "Excess ether sent while claiming art rewards is not returned to the caller, instead goes to protocol fee address",
+  "issueId": 39,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/39"
+}
