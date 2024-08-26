@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "TECHFUND-inc",
+  "risk": "2",
+  "title": "Updating of phiSignerAddress in Cred by owner will cause revert in creating and updating Creds",
+  "issueId": 63,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/63"
+}
