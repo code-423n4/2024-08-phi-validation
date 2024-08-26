@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "rscodes",
+  "risk": "2",
+  "title": "Function `signatureClaim` does not check `art.verificationType`",
+  "issueId": 78,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/78"
+}
