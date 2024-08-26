@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Tigerfrake",
+  "risk": "2",
+  "title": "`signature` can be used by anyone in `createArt()`",
+  "issueId": 65,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/65"
+}
