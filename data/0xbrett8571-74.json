@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "0xbrett8571",
+  "risk": "2",
+  "title": "Curator Rewards Distributor will not fully distribute rewards to curators. Some funds may remain stuck in the contract and not be fully distributed to the curators. Over time, these small amounts can accumulate, leading to discrepancies in the expected distribution of rewards.",
+  "issueId": 74,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/74"
+}
