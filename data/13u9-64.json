@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "13u9",
+  "risk": "2",
+  "title": "When msg.value to be set greater than artFee and call createArt function, it always reverts.",
+  "issueId": 64,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/64"
+}
