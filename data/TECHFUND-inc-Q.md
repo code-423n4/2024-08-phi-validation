@@ -6,3 +6,10 @@
 +            revert InvalidArrayLength();
 +  }
 ``` 
+
+### cred::getBatchBuyPrice()
+`credIds_` array and `amounts_`  array lengths should be validated to be request to avoid out of bounds exception and reverts.
+
+### cred::getBatchSellPrice()
+`credIds_` array and `amounts_`  array lengths should be validated to be request to avoid out of bounds exception and reverts.
+
