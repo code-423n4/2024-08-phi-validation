@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "0xbrett8571",
+  "risk": "2",
+  "title": "If `totalNum` (the total number of shares) is zero, the function reverts with the `NoSharesToDistribute` error, Curator will receive incorrect rewards due to unchanged balance after distribution",
+  "issueId": 71,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/71"
+}
