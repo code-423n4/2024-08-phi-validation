@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "0xkaox",
+  "risk": "2",
+  "title": "A malicious actor can easily substract any elements of any user's credIds array",
+  "issueId": 82,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/82"
+}
