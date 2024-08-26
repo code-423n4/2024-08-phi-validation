@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "NerfZeri",
+  "risk": "2",
+  "title": "Lack of checks in `Cred:buyShareCredFor` allows malicious user to buy on behalf of the cred contract",
+  "issueId": 67,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/67"
+}
