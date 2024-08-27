@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "0xc0ffEE",
+  "risk": "2",
+  "title": "Spamming creating Cred for arbitrary creator by replay signature",
+  "issueId": 88,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/88"
+}
