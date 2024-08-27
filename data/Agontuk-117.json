@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Agontuk",
+  "risk": "2",
+  "title": "Attacker can bypass signature verification to mint unauthorized NFTs (PhiFactory::signatureClaim)",
+  "issueId": 117,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/117"
+}
