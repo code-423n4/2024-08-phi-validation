@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "K42",
+  "risk": "2",
+  "title": "Bonding curve calculations fail at maximum supply due to division by 0",
+  "issueId": 103,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/103"
+}
