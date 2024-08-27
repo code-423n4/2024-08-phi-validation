@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Sid_Sisodia",
+  "risk": "3",
+  "title": "Missing Access Control on _updateRoyalties",
+  "issueId": 107,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/107"
+}
