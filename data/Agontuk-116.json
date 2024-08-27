@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Agontuk",
+  "risk": "2",
+  "title": "Incorrect Fee Distribution will lead to Financial Loss for Art Creators (`PhiFactory::_processClaim`)",
+  "issueId": 116,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/116"
+}
