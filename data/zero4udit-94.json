@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "zero4udit",
+  "risk": "3",
+  "title": "Re-entrancy on `claimFromFactory()` function",
+  "issueId": 94,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/94"
+}
