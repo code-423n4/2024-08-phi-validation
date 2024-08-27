@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Agontuk",
+  "risk": "3",
+  "title": "Malicious User Can Mint Multiple Times for the Same Art, Bypassing Intended Restrictions (`PhiFactory::_validateAndUpdateClaimState`)",
+  "issueId": 115,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/115"
+}
