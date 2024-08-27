@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Agontuk",
+  "risk": "2",
+  "title": "Inconsistent State Management in `Cred` Contract Can Lead to Incorrect Reporting of Curator Holdings (Cred::_handleTrade and Cred::_updateCuratorShareBalance)",
+  "issueId": 122,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/122"
+}
