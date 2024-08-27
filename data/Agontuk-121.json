@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Agontuk",
+  "risk": "2",
+  "title": "Bypassing `SHARE_LOCK_PERIOD` allows rapid trading and market manipulation (Cred::_handleTrade)",
+  "issueId": 121,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/121"
+}
