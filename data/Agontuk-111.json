@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Agontuk",
+  "risk": "3",
+  "title": "Any user can withdraw funds from any account via `RewardControl::withdrawFor()`",
+  "issueId": 111,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/111"
+}
