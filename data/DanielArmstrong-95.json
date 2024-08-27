@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "DanielArmstrong",
+  "risk": "2",
+  "title": "`Cred.sol#getPositionsForCurator()` reverts when `_start > 0`.",
+  "issueId": 95,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/95"
+}
