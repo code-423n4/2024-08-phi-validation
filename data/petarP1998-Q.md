@@ -260,4 +260,65 @@ In `BondingCurve` on several places there is missing documentation.
 
 ## Informational 05: Minter should implement `onERC1155BatchReceived`
 
-If the minter is contract it should implement `onERC1155BatchReceived` otherwise mint events will throw exception. 
+If the minter is contract it should implement `onERC1155BatchReceived` otherwise mint events will throw exception.
+
+## Informational 06: `public` functions not used internally could be marked `external`
+
+Cred::version
+Cred::sellShareCred
+Cred::buyShareCredFor
+Cred::batchBuyShareCred
+Cred::batchSellShareCred
+Cred::createCred
+Cred::getCreatorRoyalty
+Cred::getCuratorAddresses
+Cred::getCuratorAddressesWithAmount
+Cred::getRoot
+PhiFactory::version
+PhiFactory::contractURI
+PhiFactory::checkProof
+PhiNFT1155::version
+PhiNFT1155::supportsInterface
+PhiNFT1155::contractURI
+PhiNFT1155::uri
+PhiNFT1155::uri (overloaded)
+PhiNFT1155::getPhiFactoryContract
+PhiNFT1155::getTokenIdFromFactoryArtId
+PhiNFT1155::getFactoryArtId
+PhiNFT1155::getArtDataFromFactory
+PhiNFT1155::safeTransferFrom
+PhiNFT1155::safeBatchTransferFrom
+BondingCurve::getPriceData
+BondingCurve::getBuyPriceAfterFee
+BondingCurve::getSellPriceAfterFee 
+
+## Informational 07: Define and use `constant` variables instead of using literals
+
+Here’s the reformatted guidance for handling repeated constant literal values:
+
+Create Constant State Variables for Literal Values
+
+**PhiFactory.sol**
+Replace `10_000` with a constant state variable:
+        
+```solidity
+        // Define constant state variables
+        uint256 private constant MAX_PROTOCOL_FEE = 10_000;
+        uint256 private constant MAX_ART_CREATE_FEE = 10_000;
+        
+        // Use the constant state variables
+        if (protocolFee_ > MAX_PROTOCOL_FEE) revert ProtocolFeeTooHigh();
+        if (artCreateFee_ > MAX_ART_CREATE_FEE) revert ArtCreateFeeTooHigh();
+```
+
+**Claimable.sol**
+Replace repeated `msg.data[4:]` calls with constants:
+        
+```solidity
+        // Define constant state variables
+        uint256 private constant DECODE_OFFSET = 4;
+        
+        // Use the constant state variable
+        abi.decode(msg.data[DECODE_OFFSET:], (bytes32, bytes32, address, address, address, uint256, uint256, uint256, string, bytes32));
+        abi.decode(msg.data[DECODE_OFFSET:], (address, bytes32[], address, uint256, uint256, bytes32, string));
+```
