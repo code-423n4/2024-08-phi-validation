@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "smaul",
+  "risk": "2",
+  "title": "Reentrancy in _handleTrade() Can Lead to Create Cred with Uninitialized values",
+  "issueId": 145,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/145"
+}
