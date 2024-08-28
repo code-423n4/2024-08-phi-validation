@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "JuggerNaut63",
+  "risk": "2",
+  "title": "Unchecked Return Value in External Call to CuratorRewardsDistributor",
+  "issueId": 125,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/125"
+}
