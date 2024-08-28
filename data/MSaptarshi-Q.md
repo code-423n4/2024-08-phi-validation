@@ -39,3 +39,27 @@ function uri(uint256 tokenId_) public view override returns (string memory) {
 the returned data may deceive potential users, as the method will return data for a non-existent NFT id that appears to be a genuine PrivatePool. This can lead to a poor user experience or financial loss for users.
 ## Recommendation
 Throw an error if the NFT address is invalid.
+
+# [L-04] Possible front-running griefing attack on NFT creations
+https://github.com/code-423n4/2024-08-phi/blob/8c0985f7a10b231f916a51af5d506dd6b0c54120/src/PhiFactory.sol#L631
+The [createNewNFTContract](https://github.com/code-423n4/2024-08-phi/blob/8c0985f7a10b231f916a51af5d506dd6b0c54120/src/PhiFactory.sol#L620) method in in PHIFactory calls the cloneDeterministically method from LibClone that uses the create2 opcode. The create method also has a salt parameter that is passed to the cloneDeterministically call. A malicious actor can front-run every call to create and use the same salt argument. This will result in reverts of all user transactions, as there is already a contract at the address that create2 tries to deploy to.
+```
+function _createNewNFTContract(
+        PhiArt storage art,
+        uint256 newArtId,
+        ERC1155Data memory createData_,
+        uint256 credId,
+        uint256 credChainId,
+        string memory verificationType
+    )
+        private
+        returns (address)
+    {
+        address payable newArt =
+            payable(erc1155ArtAddress.cloneDeterministic(keccak256(abi.encodePacked(block.chainid, newArtId, credId))));
+
+        art.artAddress = newArt;
+
+```
+## Recommendation
+Adding msg.sender to the salt argument passed to cloneDeterministically will resolve this issue.
