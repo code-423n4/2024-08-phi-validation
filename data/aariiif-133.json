@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "aariiif",
+  "risk": "2",
+  "title": "Incorrect refund calculation in `batchBuyShareCred` function will lead to loss of funds for the contract",
+  "issueId": 133,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/133"
+}
