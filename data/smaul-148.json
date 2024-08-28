@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "smaul",
+  "risk": "2",
+  "title": "Missing check on creator address can allow setting arbitrary creator address set resulted steal of creatorFee or potential DOS",
+  "issueId": 148,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/148"
+}
