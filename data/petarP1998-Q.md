@@ -322,3 +322,11 @@ Replace repeated `msg.data[4:]` calls with constants:
         abi.decode(msg.data[DECODE_OFFSET:], (bytes32, bytes32, address, address, address, uint256, uint256, uint256, string, bytes32));
         abi.decode(msg.data[DECODE_OFFSET:], (address, bytes32[], address, uint256, uint256, bytes32, string));
 ```
+
+## Informational 08: All events is missing `indexed` fields
+
+Index event fields make the field more quickly accessible to off-chain tools that parse events. However, note that each index field costs extra gas during emission, so it's not necessarily best to index the maximum allowed per event (three fields). Each event should use three indexed fields if there are three or more fields, and gas usage is not particularly of concern for the events in question. If there are fewer than three fields, all of the fields should be indexed.
+
+## Informational 09: In `Cred::_executeBatchTrade` nonReentrant modifier should be first
+
+This is a best-practice to protect against reentrancy in other modifiers.
