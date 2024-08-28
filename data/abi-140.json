@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "abi",
+  "risk": "3",
+  "title": "Expiration Handling: Claims processed after expiration could lead to unauthorized minting.",
+  "issueId": 140,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/140"
+}
