@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "sam",
+  "risk": "2",
+  "title": "The `_curve` function in the `BondingCurve` contract contains critical vulnerabilities that could lead to division by zero, overflow, and underflow issues. These vulnerabilities could potentially be exploited to manipulate token prices or cause denial of service.",
+  "issueId": 180,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/180"
+}
