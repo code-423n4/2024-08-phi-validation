@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Tigerfrake",
+  "risk": "3",
+  "title": "Potential blocking of claims in `merkleClaim()`",
+  "issueId": 184,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/184"
+}
