@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "kn0t",
+  "risk": "2",
+  "title": "Denial of Service (DOS) Vulnerability in Cred Smart Contract's `_addCredIdPerAddress` Function",
+  "issueId": 164,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/164"
+}
