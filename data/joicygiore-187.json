@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "joicygiore",
+  "risk": "3",
+  "title": "`Cred::createCred()` is vulnerable to replay attacks due to insufficient validation.",
+  "issueId": 187,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/187"
+}
