@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "DigiSafe",
+  "risk": "2",
+  "title": "[M-4] Users can claim tokens with the same signature",
+  "issueId": 196,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/196"
+}
