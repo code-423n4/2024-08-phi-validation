@@ -1,3 +1,10 @@
+## The nonReentrant modifier should occur before all other modifiers.
+This is a best-practice to protect against reentrancy in other modifiers.
+
+Found in src/Cred.sol Line: 745
+
+        nonReentrant
+
 ## Define and use constant variables instead of using literals
 
 If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.
