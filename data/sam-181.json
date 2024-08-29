@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "sam",
+  "risk": "3",
+  "title": "The `BondingCurve::getPrice()` function issues could lead to incorrect pricing, potential exploits, and unexpected behavior. ",
+  "issueId": 181,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/181"
+}
