@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "DigiSafe",
+  "risk": "2",
+  "title": "[M-2] `PhiFactory.sol:claim` passes only the mint fee, which accumulates ether in the contract and gives opportunity for free mint by anyone",
+  "issueId": 194,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/194"
+}
