@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "aldarion",
+  "risk": "3",
+  "title": " Reward distribution is still vulnerable to flash loan attacks",
+  "issueId": 178,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/178"
+}
