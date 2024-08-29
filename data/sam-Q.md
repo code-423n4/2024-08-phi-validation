@@ -1,4 +1,4 @@
-This is the of the function which has some issues:-
+This is the function which has some issues:-
   https://github.com/code-423n4/2024-08-phi/blob/8c0985f7a10b231f916a51af5d506dd6b0c54120/src/abstract/Claimable.sol#L67-L84
 ## [M] The `Claimable::_decodeMerkleClaimData` heler function has some invulnerability realated with insuffificent input validation of `msg.data` length and the decode structure.
 
@@ -37,3 +37,43 @@ compare the decode the dynamic data part. `This might be risky as well as tricky
 - Implement the dynamic length check for the data.
 - Properly validate the decoded data.
 - Use the `assembly` code to extract the data and validate the data.
+
+
+This is the function which has some issues:-
+https://github.com/code-423n4/2024-08-phi/blob/8c0985f7a10b231f916a51af5d506dd6b0c54120/src/abstract/Claimable.sol#L22-L44
+
+## The `Claimable::signatureClaim` function in the contract lacks critical input validation checks, which could lead to several security vulnerabilities.
+
+**Description:** There are various issue like:
+
+1. Address Checking - `ref_` `verifier_` `minter_` these parameters are not checked for zero address input which might
+   cause attacker send eth to zero address.
+2. ChainId Checking - `chainId_` is not checked, which means attacker can pass any random value which might cause the
+   contract to behave unexpectedly or break it.
+3. `expiresIn_` false parameter can be pass which might hold the funds for longer period of time which is not expected.
+4. `imageURI_` is not checked for empty string which might cause the contract to behave unexpectedly or break it.
+
+**Impact:** 1. Loss of Funds. 2. Replay Attacks. 3. Inconsistent Data.
+
+Proof of Concept: An attacker could call the signatureClaim function with address(0) for minter*, ref*, and verifier*, a
+quantity* of 0, and an empty imageURI\_. This could lead to unintended behavior such as burning tokens or assets,
+inconsistent data processing, or even replaying the transaction on different chains.
+
+**Recommended Mitigation:** Follow the best practices for input validation and explicitly check for zero addresses,
+empty strings, and invalid values. Ensure that the function is not vulnerable to replay attacks and that the data is
+consistent across all chains.
+
+```javascript
+if (minter_ == address(0) || ref_ == address(0) || verifier_ == address(0)) {
+  revert("Claimable: zero address");
+}
+if (chainId_ == expectedChainId) {
+  revert("Claimable: zero chainId");
+}
+if (expiresIn_ == false) {
+  revert("Claimable: expiresIn_ is false");
+}
+if (bytes(imageURI_).length == 0) {
+  revert("Claimable: empty imageURI_");
+}
+```
