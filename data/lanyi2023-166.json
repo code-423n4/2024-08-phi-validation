@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "lanyi2023",
+  "risk": "3",
+  "title": "The adversary can steal the royalty fee by using the credId",
+  "issueId": 166,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/166"
+}
