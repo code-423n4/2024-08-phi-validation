@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "abi",
+  "risk": "3",
+  "title": "Rewards can be sweeped pre-maturely because of missing check with closing the reward period.",
+  "issueId": 177,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/177"
+}
