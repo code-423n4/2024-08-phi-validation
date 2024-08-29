@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "aariiif",
+  "risk": "2",
+  "title": "Attacker will manipulate the PhiRewards contract balance by exploiting the incorrect handling of curator rewards",
+  "issueId": 179,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/179"
+}
