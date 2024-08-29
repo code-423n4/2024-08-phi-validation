@@ -1,4 +1,13 @@
-## The nonReentrant modifier should occur before all other modifiers.
+## Unused Custom Error.
+it is recommended that the definition be removed when custom error is unused.
+
+Found in src/interfaces/IContributeRewards.sol Line: 17
+
+    error SweepFailed();
+
+
+
+## The `nonReentrant` `modifier` should occur before all other modifiers.
 This is a best-practice to protect against reentrancy in other modifiers.
 
 Found in src/Cred.sol Line: 745
