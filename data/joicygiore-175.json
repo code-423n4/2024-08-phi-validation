@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "joicygiore",
+  "risk": "3",
+  "title": "`PhiFactory::signatureClaim()` is Vulnerable to Replay Attacks Due to Insufficient Validation",
+  "issueId": 175,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/175"
+}
