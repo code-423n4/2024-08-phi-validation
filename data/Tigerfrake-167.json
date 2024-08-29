@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Tigerfrake",
+  "risk": "2",
+  "title": "Incorrect `endTime` validation during art creation",
+  "issueId": 167,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/167"
+}
