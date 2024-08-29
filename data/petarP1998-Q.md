@@ -237,6 +237,13 @@ Even if the admins of the protocol, want to update the `PhiNFT1155` this is impo
 
 Expose a method in `PhiFactory` which can be used to call the update method of the `PhiNFT1155`.
 
+## Low 10: Limit the number of creds per user
+
+Currently user can have shares of as many as creds as he wants. This can lead to some problems in `Cred::getPositionsForCurator`, because it iterates through all of the shares per user. 
+
+## Recommendation
+Consider limiting the number of creds that user can have.
+
 # Informational
 
 ## Informational 01: Everyone can buy shares to anyone
