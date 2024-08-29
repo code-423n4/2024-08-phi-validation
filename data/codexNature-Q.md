@@ -1,3 +1,25 @@
+## Define and use constant variables instead of using literals
+
+If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.
+
+4 Found Instances
+Found in src/PhiFactory.sol Line: 423
+
+        if (protocolFee_ > 10_000) revert ProtocolFeeTooHigh();
+Found in src/PhiFactory.sol Line: 431
+
+        if (artCreateFee_ > 10_000) revert ArtCreatFeeTooHigh();
+Found in src/abstract/Claimable.sol Line: 35
+
+            msg.data[4:], (bytes32, bytes32, address, address, address, uint256, uint256, uint256, string, bytes32)
+Found in src/abstract/Claimable.sol Line: 83
+
+            abi.decode(msg.data[4:], (address, bytes32[], address, uint256, uint256, bytes32, string));
+
+
+
+
+
 ## Missing checks for address(0) when assigning values to address state variables
 
 Several instances found where the address validation is missing. A zero
