@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "joicygiore",
+  "risk": "3",
+  "title": "`PhiFactory::merkleClaim()` is Vulnerable to Replay Attacks Due to Insufficient Validation",
+  "issueId": 174,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/174"
+}
