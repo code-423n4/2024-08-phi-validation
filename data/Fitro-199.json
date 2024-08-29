@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Fitro",
+  "risk": "2",
+  "title": "Cred.sol :: createCred() a user can create as many Cred as they want within the allowed time range.",
+  "issueId": 199,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/199"
+}
