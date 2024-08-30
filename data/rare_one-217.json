@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "rare_one",
+  "risk": "3",
+  "title": "Unbounded loops in distribute Function in CuratorRewardsDistributor.sol contract",
+  "issueId": 217,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/217"
+}
