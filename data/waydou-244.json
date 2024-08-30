@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "waydou",
+  "risk": "3",
+  "title": "Potential for Stuck Eth and underpayment for minting due to improper msg.value check in PhiFactory",
+  "issueId": 244,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/244"
+}
