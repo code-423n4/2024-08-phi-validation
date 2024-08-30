@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "20centclub",
+  "risk": "2",
+  "title": "Changing the protocolFeeDestination in PhiFactory will DoS fee receving in PhiNFT1155",
+  "issueId": 242,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/242"
+}
