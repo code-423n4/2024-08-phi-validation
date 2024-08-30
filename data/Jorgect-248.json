@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Jorgect",
+  "risk": "3",
+  "title": "The protocol is handling unsafe the `createCred` signature allowing an attacker to drain funds",
+  "issueId": 248,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/248"
+}
