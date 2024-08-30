@@ -6,7 +6,7 @@ https://github.com/code-423n4/2024-08-phi/blob/8c0985f7a10b231f916a51af5d506dd6b
 
 ## Summary
 
-The `withdraw` function is called whenever owner wants to withdraw ether from the contract. Considering the design of the `PhiFactory` contract is not supposed to receive/hold ether and lack of receive/fallback function making `withdraw` function redundant or unusable.
+The `withdraw` function is called whenever owner wants to withdraw ether from the contract. Considering the design of the `PhiFactory` contract is not supposed to hold ether and lack of receive/fallback function making `withdraw` function redundant or unusable.
 
 ## Tools Used
 
