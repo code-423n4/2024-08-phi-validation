@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "ironside",
+  "risk": "2",
+  "title": "Uncapped `mintFee` allows frontrunning attacks on large buy orders",
+  "issueId": 221,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/221"
+}
