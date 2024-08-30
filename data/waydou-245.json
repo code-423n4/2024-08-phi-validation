@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "waydou",
+  "risk": "3",
+  "title": "Potential DoS in Art Creation Due to Predictable `cloneDeterministic` Addresses",
+  "issueId": 245,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/245"
+}
