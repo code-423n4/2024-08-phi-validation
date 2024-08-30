@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "DanielArmstrong",
+  "risk": "3",
+  "title": "`CuratorRewardsDistributor.sol#distribute()` may DOS.",
+  "issueId": 215,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/215"
+}
