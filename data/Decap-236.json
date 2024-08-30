@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Decap",
+  "risk": "3",
+  "title": "PhiNFT1155.sol does not inherit from IPhiNFT1155Ownable interface",
+  "issueId": 236,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/236"
+}
