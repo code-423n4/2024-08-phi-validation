@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "roland",
+  "risk": "2",
+  "title": "Cred trades succeeds despite priceLimit being 0",
+  "issueId": 224,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/224"
+}
