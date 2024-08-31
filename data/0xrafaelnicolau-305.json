@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "0xrafaelnicolau",
+  "risk": "3",
+  "title": "Wrong function visibility enables attackers to block users from selling cred shares",
+  "issueId": 305,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/305"
+}
