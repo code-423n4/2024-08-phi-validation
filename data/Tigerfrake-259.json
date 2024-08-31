@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Tigerfrake",
+  "risk": "3",
+  "title": "Lack `credData` validation during Art initialization may result in potential issues",
+  "issueId": 259,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/259"
+}
