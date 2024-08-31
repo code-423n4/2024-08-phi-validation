@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "emerald7017",
+  "risk": "2",
+  "title": "Users can buy shares without sending sufficient payment to cover the total fees (protocol fee + creator fee).",
+  "issueId": 315,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/315"
+}
