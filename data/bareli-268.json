@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "bareli",
+  "risk": "2",
+  "title": "use address(this) instead of \"this\"  in claim.",
+  "issueId": 268,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/268"
+}
