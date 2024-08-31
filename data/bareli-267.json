@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "bareli",
+  "risk": "2",
+  "title": "updateArtSettings should be having  whenNotPaused",
+  "issueId": 267,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/267"
+}
