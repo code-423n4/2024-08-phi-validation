@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "eLSeR17",
+  "risk": "3",
+  "title": "BondingCurve.getPrice() reverts in several different situations",
+  "issueId": 283,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/283"
+}
