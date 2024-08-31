@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "bareli",
+  "risk": "2",
+  "title": "No arraay length check in _executeBatchTrade.",
+  "issueId": 263,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/263"
+}
