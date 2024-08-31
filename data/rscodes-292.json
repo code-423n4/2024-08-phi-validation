@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "rscodes",
+  "risk": "2",
+  "title": "`createCred` in `Cred.sol` doesnt check if `block.chainid` matches `credChainId` allowing malicious users to deploy creds on a different chain without permission",
+  "issueId": 292,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/292"
+}
