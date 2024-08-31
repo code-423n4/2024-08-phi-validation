@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "th3l1ghtd3m0n",
+  "risk": "2",
+  "title": "`signatureClaim()` is vulnerable to signature replay",
+  "issueId": 251,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/251"
+}
