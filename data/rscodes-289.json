@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "rscodes",
+  "risk": "3",
+  "title": "Malicious users can exploit a re-entrancy opportunity in `_handletrade` to bypass `SHARE_LOCK_PERIOD` and carry out a flashloan attack to dilute existing shareholders and steal their rewards distribution",
+  "issueId": 289,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/289"
+}
