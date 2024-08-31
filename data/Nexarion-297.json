@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Nexarion",
+  "risk": "2",
+  "title": "Unintended Full Balance Withdrawal When Amount is Set to Zero",
+  "issueId": 297,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/297"
+}
