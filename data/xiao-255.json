@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "xiao",
+  "risk": "2",
+  "title": "When using initialize, you need to call the initialize method in each Base contract yourself.",
+  "issueId": 255,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/255"
+}
