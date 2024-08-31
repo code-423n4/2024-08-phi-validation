@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "bumble",
+  "risk": "2",
+  "title": "`PhiFactory` deployments won't work correctly on ZKsync chain",
+  "issueId": 293,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/293"
+}
