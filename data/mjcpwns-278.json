@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "mjcpwns",
+  "risk": "3",
+  "title": "_updateCuratorShareBalance  does not reduce share balance but instead increase share balance",
+  "issueId": 278,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/278"
+}
