@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "federodes",
+  "risk": "3",
+  "title": "`CuratorRewardsDistributor::distribute` Exceeds 30,000,000 Block Gas Limit When 110 or More Curators Hold Shares for the Same Credential",
+  "issueId": 319,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/319"
+}
