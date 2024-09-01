@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "BajagaSec",
+  "risk": "3",
+  "title": "Underflow vulnerability in the createArtFromFactory() function will result in loss of protocol funds",
+  "issueId": 350,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/350"
+}
