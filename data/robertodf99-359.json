@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "robertodf99",
+  "risk": "2",
+  "title": "Incorrect refund recipient in function `PhiNFT1155:createArtFromFactory` ",
+  "issueId": 359,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/359"
+}
