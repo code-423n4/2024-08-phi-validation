@@ -1,0 +1,2 @@
+Lack of Event Emissions for mint, safeTransferFrom, and safeBatchTransferFrom in PhiNFT1155
+The PhiNFT1155 contract contains several critical functions for minting and transferring ERC-1155 tokens: mint, safeTransferFrom, and safeBatchTransferFrom. However, there is a notable lack of event emissions for these functions.
