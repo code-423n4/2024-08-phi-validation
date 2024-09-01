@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "rscodes",
+  "risk": "3",
+  "title": "Malicious user able to lock victim's shares to prevent them from selling temporarily, potentially carrying out market manipulation while letting victim take on unnecessary risk",
+  "issueId": 341,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/341"
+}
