@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "onthehunt11",
+  "risk": "3",
+  "title": "_handleTrade() can front run someone selling and blocking him by a gift",
+  "issueId": 328,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/328"
+}
