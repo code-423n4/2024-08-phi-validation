@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "avoloder",
+  "risk": "2",
+  "title": "Array length check missing in ValidateAndCalculateBatch",
+  "issueId": 369,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/369"
+}
