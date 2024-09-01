@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "pro_king",
+  "risk": "2",
+  "title": "Lack of Validation for `curatorRewardsDistributor_` Address In `PhiRewards::updateCuratorRewardsDistributor` Function Could Lead to Invalid Address Assignment",
+  "issueId": 333,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/333"
+}
