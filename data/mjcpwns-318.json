@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "mjcpwns",
+  "risk": "2",
+  "title": "Wrongful calculation in handleTrade (getPriceData) due to using isBuy flag even when selling",
+  "issueId": 318,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/318"
+}
