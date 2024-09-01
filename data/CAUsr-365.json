@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "CAUsr",
+  "risk": "3",
+  "title": "Reentrancy in creating Creds allows an attacker to steal all Ether from the Cred contract",
+  "issueId": 365,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/365"
+}
