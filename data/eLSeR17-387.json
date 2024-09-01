@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "eLSeR17",
+  "risk": "2",
+  "title": "CuratorRewardDistributor.distribute() can be frontrun to get rewards for a recent share",
+  "issueId": 387,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/387"
+}
