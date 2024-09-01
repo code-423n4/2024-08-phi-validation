@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "MrValioBg",
+  "risk": "2",
+  "title": "ImageURI does not have any validations, and can be arbitrary, thus containing malicious URIs, possibly XSS",
+  "issueId": 377,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/377"
+}
