@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "CAUsr",
+  "risk": "2",
+  "title": "`_addCredIdPerAddress` and `_removeCredIdPerAddress` functions of Cred are erroneously publicly accessible",
+  "issueId": 367,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/367"
+}
