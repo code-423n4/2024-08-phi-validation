@@ -508,3 +508,27 @@ Remove the `unchecked` block and rely on Solidity's default `overflow checks` to
     }
 ```
 
+# [L-13] Premature `signature` expiration
+
+## Vulnerability details
+The current logic in [`_validateArtCreationSignature()`](https://github.com/code-423n4/2024-08-phi/blob/8c0985f7a10b231f916a51af5d506dd6b0c54120/src/PhiFactory.sol#L592) is:
+```solidity
+if (expiresIn_ <= block.timestamp) revert SignatureExpired();
+```
+Given the error thrown, `SignatureExpired()`, it seems the intention is to allow the `signature` to be valid until the end of the specified `expiresIn_` timestamp. This means the `signature` should be valid throughout the block at which `expiresIn_` occurs, not just up to the moment before it.
+
+This means that if `expiresIn_` is set to a specific time, the `signature` becomes invalid at the very start of that block, rather than at the end.
+
+Other instances:
+- [`createCred()`](https://github.com/code-423n4/2024-08-phi/blob/8c0985f7a10b231f916a51af5d506dd6b0c54120/src/Cred.sol#L254)
+- [`updateCred()`](https://github.com/code-423n4/2024-08-phi/blob/8c0985f7a10b231f916a51af5d506dd6b0c54120/src/Cred.sol#L295)
+
+## Impact
+Signatures may become invalid earlier than users anticipate, leading to failed transactions 
+
+## Recommendation
+To align with the likely intended behavior, the logic should be adjusted to:
+```diff
+-   if (expiresIn_ <= block.timestamp) revert SignatureExpired();
++   if (expiresIn_ < block.timestamp) revert SignatureExpired();
+```
