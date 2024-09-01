@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Jorgect",
+  "risk": "2",
+  "title": "Attacker can DoS  anyone trying to sell shares in `cred.sol` contract",
+  "issueId": 375,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/375"
+}
