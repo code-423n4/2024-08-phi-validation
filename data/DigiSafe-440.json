@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "DigiSafe",
+  "risk": "2",
+  "title": "[M-7] PhiNFT Transfers are meant to be pausable, but it is not possible",
+  "issueId": 440,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/440"
+}
