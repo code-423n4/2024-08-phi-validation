@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "54thMass",
+  "risk": "2",
+  "title": "Large Input Array can DOS depositBatch function(RewardControl.sol::Line 54)",
+  "issueId": 427,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/427"
+}
