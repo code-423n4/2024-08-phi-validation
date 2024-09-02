@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "pepoc",
+  "risk": "2",
+  "title": "Missing artId Validation in claim Function",
+  "issueId": 407,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/407"
+}
