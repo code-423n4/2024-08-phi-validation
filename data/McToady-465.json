@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "McToady",
+  "risk": "2",
+  "title": "The `onlyOwner` functions of `PhiNFT1155` deployed via `PhiFactory` will have uncallable functions because `PhiFactory` is set as the contracts owner",
+  "issueId": 465,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/465"
+}
