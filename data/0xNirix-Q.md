@@ -16,4 +16,4 @@ for (uint256 i = start_; i < stopIndex; i++) {
 }
 ```
 
-4. The _getCreatorFee function contains a logical error where it sets creatorFee to 0 when supply_ is 0, but then overwrites this value regardless of the supply. This may lead to incorrect fee calculations, potentially causing transactions that rely on this fee for slippage checks to fail unexpectedly. https://github.com/code-423n4/2024-08-phi/blob/8c0985f7a10b231f916a51af5d506dd6b0c54120/src/curve/BondingCurve.sol#L142
+4. The _getCreatorFee function contains a logical error where it sets creatorFee to 0 when supply_ is 0, but then overwrites this value regardless of the supply. This may lead to incorrect fee calculations. https://github.com/code-423n4/2024-08-phi/blob/8c0985f7a10b231f916a51af5d506dd6b0c54120/src/curve/BondingCurve.sol#L142
