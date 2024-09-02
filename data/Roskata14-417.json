@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Roskata14",
+  "risk": "2",
+  "title": "Unsigned Integer Subtraction Reverts in _processClaim Function Due to Underflow Risk",
+  "issueId": 417,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/417"
+}
