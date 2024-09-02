@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "avoloder",
+  "risk": "3",
+  "title": "Any excess amount of ether will cause a transaction to revert when createArtFromFactory in PhiNFT1155 is called",
+  "issueId": 445,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/445"
+}
