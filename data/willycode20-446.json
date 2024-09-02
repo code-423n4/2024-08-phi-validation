@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "willycode20",
+  "risk": "3",
+  "title": "Title: The [`PhiFactory:createArt`] is vulnerable to replay attack, a malicious user can call this function multiple times under certain condition and create multiple arts with the same signature",
+  "issueId": 446,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/446"
+}
