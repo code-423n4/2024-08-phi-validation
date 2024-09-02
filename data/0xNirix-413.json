@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "0xNirix",
+  "risk": "2",
+  "title": "Incorrect Fee Check in PhiFactory Contract set methods will not allow fee updates",
+  "issueId": 413,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/413"
+}
