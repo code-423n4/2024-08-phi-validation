@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "0xBugSlayer",
+  "risk": "3",
+  "title": "User can  prevent the protocol fee from going to the `protocolFeeDestination` address via reeentrancy possibility in `Cred::_handleTrade()` function`",
+  "issueId": 408,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/408"
+}
