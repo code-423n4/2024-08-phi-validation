@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Inspecktor",
+  "risk": "3",
+  "title": "You can block sale/purchase through the condition if (block.timestamp <= lastTradeTimestamp[credId_][curator_] + SHARE_LOCK_PERIOD)",
+  "issueId": 450,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/450"
+}
