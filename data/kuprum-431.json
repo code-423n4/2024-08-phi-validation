@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "kuprum",
+  "risk": "3",
+  "title": "`Cred::_removeCredIdPerAddress` is public; `Cred` can be DoSed to prevent curators sellling their shares",
+  "issueId": 431,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/431"
+}
