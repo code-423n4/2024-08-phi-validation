@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "McToady",
+  "risk": "2",
+  "title": "It is possible for anyone to replay a valid signature from `PhiFactory::createArt` to create art for a given `credId`",
+  "issueId": 469,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/469"
+}
