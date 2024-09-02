@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "0XRolko",
+  "risk": "2",
+  "title": "Centralization risk by giving a single user the privilege of pause/unpause certain operations.",
+  "issueId": 471,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/471"
+}
