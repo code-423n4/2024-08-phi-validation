@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "udayjjw",
+  "risk": "3",
+  "title": "Malicious actor can frontrun call to distribute(credId) in CuratorRewardsDistributor.sol and claim other curators' rewards",
+  "issueId": 426,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/426"
+}
