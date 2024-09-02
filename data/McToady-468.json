@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "McToady",
+  "risk": "2",
+  "title": "There are no checks on the URI passed by users when claiming art in `PhiFactory`, allowing them to direct their minted art output to any link",
+  "issueId": 468,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/468"
+}
