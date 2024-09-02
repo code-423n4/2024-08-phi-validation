@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "DigiSafe",
+  "risk": "3",
+  "title": "Users may lose funds if they accidentally send more than enough when minting",
+  "issueId": 467,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/467"
+}
