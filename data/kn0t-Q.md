@@ -41,10 +41,10 @@ function updateArtSettings(
         revert InvalidAddressZero();
     }
 
-    if (endTime_ < startTime_) {
+    if (endTime_ < startTime_) { // @audit endTime_ == startTime_ will not revert
         revert InvalidTimeRange();
     }
-    if (endTime_ < block.timestamp) {
+    if (endTime_ < block.timestamp) { // @audit endTime_ == block.timestamp will not revert
         revert EndTimeInPast();
     }
 
@@ -171,15 +171,7 @@ IPhiRewards(phiRewardsAddress).deposit{ value: creatorFee }( // Cross-contract c
 ```
 
 ### Recommended Mitigation Steps
-To mitigate this potential vulnerability, consider one of the following approaches:
-
-1. Move the excess ETH transfer to the end of the function, after all state changes and cross-contract calls:
-2. Alternatively, add a nonReentrant modifier to the function to prevent any reentrancy:
-
-Either of these approaches will help prevent potential future vulnerabilities related to reentrancy in cross-contract interactions.
-
-
-
+Move the excess ETH transfer to the end of the function, after all state changes and cross-contract calls
 
 
 
@@ -204,9 +196,8 @@ phiRewardsContract.depositBatch{ value: actualDistributeAmount }(
 ```
 
 ### Recommended Mitigation Steps
-To mitigate this potential vulnerability, consider one of the following approaches:
-1. Move the appreciation fee transfer to the end of the function, after all state changes and cross-contract calls:
-2. Alternatively, add a nonReentrant modifier to the function to prevent any reentrancy:
+Move the appreciation fee transfer to the end of the function, after all state changes and cross-contract calls:
+
 
 
 Either of these approaches will help prevent potential future vulnerabilities related to reentrancy in cross-contract interactions and protect against possible reward manipulation.
