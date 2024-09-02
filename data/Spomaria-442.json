@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Spomaria",
+  "risk": "3",
+  "title": "Users can lose their funds when they call the `CuratorRewardsDistributor::deposit` with some ether",
+  "issueId": 442,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/442"
+}
