@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "unnamed",
+  "risk": "2",
+  "title": "Public Functions `Cred.sol::_addCredIdPerAddress` and 'Cred.sol_removeCredIdPerAddress` Should be Internal",
+  "issueId": 475,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/475"
+}
