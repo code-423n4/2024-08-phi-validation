@@ -15,3 +15,5 @@ for (uint256 i = start_; i < stopIndex; i++) {
     // ...
 }
 ```
+
+4. The `getShareNumber` function in the Cred contrac uses EnumerableMap.get(), causing it to revert for addresses with no balance instead of returning zero. This can lead to unexpected failures in systems relying on this function to check share balances. To fix, replace get() with tryGet().https://github.com/code-423n4/2024-08-phi/blob/8c0985f7a10b231f916a51af5d506dd6b0c54120/src/Cred.sol#L427
