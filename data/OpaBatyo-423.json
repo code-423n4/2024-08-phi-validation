@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "OpaBatyo",
+  "risk": "2",
+  "title": "`createArt()` and `claim()` signatures can be replayed by a user which they were not meant for since there is no address input validation",
+  "issueId": 423,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/423"
+}
