@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "0xAkira",
+  "risk": "2",
+  "title": "When calculating the price, the cred can return an incorrect price after a fee. ",
+  "issueId": 626,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/626"
+}
