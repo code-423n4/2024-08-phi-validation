@@ -7,12 +7,13 @@
 | NC-02    | `PhiFactory::_processClaim` loads `PhiArt storage art = arts[artId_]`, however `art` is never updated meaning this could be marked `memory` rather than `storage`                        |
 | NC-03    | `Cred::createCred` should return `credId` upon completion                                                                                                                                |
 | NC-04    | `Cred::_removeCredIdPerAddress` unnecessarily checks `_credIdsPerAddress[sender_].length` rather than the `_credIdsPerAddressArrLength` mapping                                          |
-| NC-05    | The NATSPEC comments for `ICreatorRoyaltiesControl::RoyaltyConfiguration` include information on a `royaltyMintSchedule` param which is no longer present in the code                    |
-| NC-06    | Multiple spelling mistakes in the protocol should be fixed                                                                                                                               |
+| NC-05    | `PhiNFT1155` inherits and initializes `ReentrancyGuardUpgradeable` but does not use any of its functionality                                                                             |
+| NC-06    | The NATSPEC comments for `ICreatorRoyaltiesControl::RoyaltyConfiguration` include information on a `royaltyMintSchedule` param which is no longer present in the code                    |
+| NC-07    | Multiple spelling mistakes in the protocol should be fixed                                                                                                                               |
 
 # [L-01] `PhiNFT1155` attempts to refund excess ether sent during art creation but mistakenly sends it to the `PhiFactory` contract rather than the actual caller, causing the function to revert
 
-[Link]()
+[Link](https://github.com/code-423n4/2024-08-phi/blob/main/src/art/PhiNFT1155.sol#L151)
 
 If the user sends too large an `artFee` when creating art the `PhiNFT1155` contract attempts to refund the excess:
 
@@ -72,12 +73,17 @@ Changing this would make the code more readable as the reader would understand t
 [Link](https://github.com/code-423n4/2024-08-phi/blob/main/src/Cred.sol#L697)
 The `_credIdsPerAddressArrLength` exists for this kind of check so failing to use it makes it's existence redudant.
 
-# [NC-05] The NATSPEC comments for `ICreatorRoyaltiesControl::RoyaltyConfiguration` include information on a `royaltyMintSchedule` param which is no longer present in the code
+# [NC-05] `PhiNFT1155` inherits and initializes `ReentrancyGuardUpgradeable` but does not use any of its functionality
+
+[Link](https://github.com/code-423n4/2024-08-phi/blob/main/src/art/PhiNFT1155.sol#L108)
+Either the contract is missing intended reentrancy guards which should be added, or the inheritance can be removed.
+
+# [NC-06] The NATSPEC comments for `ICreatorRoyaltiesControl::RoyaltyConfiguration` include information on a `royaltyMintSchedule` param which is no longer present in the code
 
 [Link](https://github.com/code-423n4/2024-08-phi/blob/main/src/interfaces/ICreatorRoyaltiesControl.sol#L24)
 The stale docs should be updated to remove mention of the `royaltyMintSchedule`
 
-# [NC-06] Multiple spelling mistakes in the protocol should be fixed
+# [NC-07] Multiple spelling mistakes in the protocol should be fixed
 
 [Merke -> Merkle](https://github.com/code-423n4/2024-08-phi/blob/main/src/Cred.sol#L45)
 [initilaized -> initialized](https://github.com/code-423n4/2024-08-phi/blob/main/src/abstract/CreatorRoyaltiesControl.sol#L13)
