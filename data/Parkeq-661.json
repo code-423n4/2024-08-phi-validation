@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Parkeq",
+  "risk": "2",
+  "title": "Possible underflow could miscalculate fees and revert ",
+  "issueId": 661,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/661"
+}
