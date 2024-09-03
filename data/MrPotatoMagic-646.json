@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "MrPotatoMagic",
+  "risk": "3",
+  "title": "Malicious user could bypass share lock period and receive maximum curator rewards without ever being a share holder",
+  "issueId": 646,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/646"
+}
