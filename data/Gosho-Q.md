@@ -1,0 +1,1 @@
+* The [`PhiNFT1155`](https://github.com/code-423n4/2024-08-phi/blob/main/src/art/PhiNFT1155.sol) contract inherits `PausableUpgradeable` by OZ, but does not use the `whenNotPaused` modifier for function such as - `safeTransferFrom(...)` & `safeBatchTransferFrom`
