@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Bz",
+  "risk": "3",
+  "title": "Unprotected Zero-Value Transactions in phiRewards Contract Enable Denial of Service (DoS) and Other Attacks",
+  "issueId": 612,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/612"
+}
