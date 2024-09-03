@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "gregom",
+  "risk": "3",
+  "title": "Unchecked ERC20 Return Values in Phi Protocol Contracts Risk Unauthorized State Changes and Financial Discrepancies",
+  "issueId": 623,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/623"
+}
