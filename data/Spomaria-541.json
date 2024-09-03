@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Spomaria",
+  "risk": "2",
+  "title": "Missing `priceLimits_` length check in `Cred::_validateAndCalculateBatch` function causing an array out-of-bounds access in the `Cred::batchBuyShareCred` and `Cred::batchSellShareCred` functions",
+  "issueId": 541,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/541"
+}
