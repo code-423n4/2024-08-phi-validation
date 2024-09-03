@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "NexusAudits",
+  "risk": "2",
+  "title": "Block Timestamp Manipulation in PhiFactory Contract Affects NFT Minting Timing",
+  "issueId": 605,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/605"
+}
