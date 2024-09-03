@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "20centclub",
+  "risk": "2",
+  "title": "Missing authentication check can lead to potential DoS or data corruption",
+  "issueId": 572,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/572"
+}
