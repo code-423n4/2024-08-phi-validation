@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Kaysoft",
+  "risk": "2",
+  "title": "Using the `this` keyword to pass `mintFee` ETh value in the `claim(...)` function causes loss of excess ETH ",
+  "issueId": 632,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/632"
+}
