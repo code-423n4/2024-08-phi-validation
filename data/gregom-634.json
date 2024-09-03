@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "gregom",
+  "risk": "3",
+  "title": "Unsanitized Input in mint() Allows JSON Injection, Compromising NFT Metadata Integrity",
+  "issueId": 634,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/634"
+}
