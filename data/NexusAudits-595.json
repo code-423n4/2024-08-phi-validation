@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "NexusAudits",
+  "risk": "2",
+  "title": "Front-Running Vulnerability in NFT Royalty Updates Allows Profit Exploitation and Creator Losses",
+  "issueId": 595,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/595"
+}
