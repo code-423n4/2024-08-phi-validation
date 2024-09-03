@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "NexusAudits",
+  "risk": "3",
+  "title": "Incorrect Sell Price Calculation in BondingCurve Contract Leads to Overpayment and Economic Imbalance",
+  "issueId": 618,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/618"
+}
