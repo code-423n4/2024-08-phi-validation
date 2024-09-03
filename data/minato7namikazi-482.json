@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "minato7namikazi",
+  "risk": "3",
+  "title": "the `batchSellShareCred` function does not check for the share lock period before executing the batch sell operation",
+  "issueId": 482,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/482"
+}
