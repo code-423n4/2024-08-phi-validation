@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "VulnViper",
+  "risk": "2",
+  "title": "`batchClaim` Function Reverts Entire Operation on Single Claim Failure",
+  "issueId": 501,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/501"
+}
