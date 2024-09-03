@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "pfapostol",
+  "risk": "2",
+  "title": "Invalid `protocolFeePercent` values ​​can be used to grief `Cred` users or a DoS of the protocol.",
+  "issueId": 523,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/523"
+}
