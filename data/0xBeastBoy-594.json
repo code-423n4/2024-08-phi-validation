@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "0xBeastBoy",
+  "risk": "2",
+  "title": "Issue in `getTotalMintFee` Function Due to Missing Array Length Validation",
+  "issueId": 594,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/594"
+}
