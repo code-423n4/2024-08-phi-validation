@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Evo",
+  "risk": "2",
+  "title": "An attacker can steal royalty fee by calling the distribute function",
+  "issueId": 552,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/552"
+}
