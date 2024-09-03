@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "NexusAudits",
+  "risk": "2",
+  "title": "Signature Replay Vulnerability in NFT Claim Function Allows Unlimited Minting",
+  "issueId": 610,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/610"
+}
