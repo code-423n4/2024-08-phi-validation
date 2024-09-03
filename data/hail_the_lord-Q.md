@@ -1,11 +1,19 @@
+# Low - 1
 Missing whenNotPaused modifier causes the protocol to not halt and continue the execution of functions which should stop incase of emergency.
 
-## Description
-Some contracts have `PausableUpgradeable` contract inherited whose main functionality is to halt the protocol execution completely when in emergency.
-But the functions which are responsible to cause state change must have a modifier known as `whenNotPaused` which makes the function useless unless the owner switches them On again.
-Below mentioned functions with contract they are in are missing that modifier :
+## Recommended Mitigation Steps
+Below mentioned functions with contract they are in are missing `whenNotPaused` modifier :
 `PhiFactory` :: `updateArtSettings()`, `claim()`, `batchClaim()`
 `PhiNFT1155` :: `updateRoyalties()`, `safeTransferFrom()`, `safeBatchTransferFrom`, ``
 
+# Low - 2
+If the artist does not update the art settings using updateArtSettings, they may not receive royalty rewards, missing out on potential earnings.
+Which indicates, unless and untill the artist himself updates it, the royalty benefits would be achieved to the protocol.
+
 ## Recommended Mitigation Steps
-add `whenNotPaused` modifier to the above mentioned functions
+Add the `updateRoyalties()` function, while creating an art using `createArt()` function
+
+
+
+
+
