@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Evo",
+  "risk": "2",
+  "title": "Incorrect validation for artist in PhiNFT1155.updateRoyalties() allows unintended royalty disabling",
+  "issueId": 550,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/550"
+}
