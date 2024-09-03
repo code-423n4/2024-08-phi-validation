@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "M3talDrag0n",
+  "risk": "3",
+  "title": "Incorrect msg.value handling in claim function prevents ETH refunds",
+  "issueId": 579,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/579"
+}
