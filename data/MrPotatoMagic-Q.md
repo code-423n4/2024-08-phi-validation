@@ -537,6 +537,28 @@ File: Cred.sol
 187:     }
 ```
 
+## [L-17] Consider introducing a rate limit as to how often mintFee and soulBounded values can be changed.
+
+Artist has the power to increase fees by frontrunning certain users. This could be used to favour some users over the others by charging them less and the others more.
+
+Similarly, the soulBounded value can be changed by artist to favour certain users to transfer their NFTs in the same block. Following this, the artist can reset it back to true. 
+
+Solution: Consider having some buffer period as to how often these values can be updated. 
+```solidity
+File: PhiFactory.sol
+219:     function updateArtSettings(
+220:         uint256 artId_,
+221:         string memory url_,
+222:         address receiver_,
+223:         uint256 maxSupply_,
+224:         uint256 mintFee_,
+225:         uint256 startTime_,
+226:         uint256 endTime_,
+227:         bool soulBounded_,
+228:         IPhiNFT1155Ownable.RoyaltyConfiguration memory configuration
+229:     )
+```
+
 ## Governance risks
 
 ### Roles/Actors in the system
