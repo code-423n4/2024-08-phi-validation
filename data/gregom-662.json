@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "gregom",
+  "risk": "3",
+  "title": "Insufficient Validation in createArt Allows Manipulation of NFT Creation and Unauthorized Credential Issuance",
+  "issueId": 662,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/662"
+}
