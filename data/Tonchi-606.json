@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Tonchi",
+  "risk": "3",
+  "title": "Denial of Service in RewardControl.sol contract, leads to locking of withdrawal and deposit functionality.",
+  "issueId": 606,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/606"
+}
