@@ -10,6 +10,7 @@
 | [QA-05](#qa-05-phifactorycreateart-allows-input-signature-to-be-replayed-due-to-lacking-nonce) | PhiFactory:createArt allows input signature to be replayed due to lacking nonce |
 | [QA-06](#qa-06-phifactorycreateart-reverts-if-artcreatefee-drop) | PhiFactory:createArt reverts if `artCreateFee` drop |
 | [QA-07](#qa-07-import-test-library-to-production-code) | import test library to production code |
+| [QA-08](#qa-08-bondingcurve_getcreatorfee-get-non-zero-creatorfee-with-zero-supply-causing-invalid-priceafterfee-reading) | BondingCurve:_getCreatorFee gets non-zero creatorFee with zero supply, causing invalid priceAfterFee reading |
 
 ## [QA-01] contractURI not return generic info
 ### Impact
@@ -252,3 +253,33 @@ Another instance of importing the test library `console2` from `forge-std` in pr
 
 ### Recommendation
 Remove the import of the test library from the production code.
+
+## [QA-08] BondingCurve:_getCreatorFee gets non-zero creatorFee with zero supply, causing invalid priceAfterFee reading
+
+### Impact
+
+The `creatorFee` is incorrectly calculated when the supply is zero. This can lead to an inaccurate `priceAfterFee` calculation, which may distort buy and sell prices, potentially affecting users' decisions.
+
+### Instances
+
+In the `BondingCurve` contract, when the supply is zero, the `creatorFee` is set to 0 but is not returned immediately, allowing subsequent code to overwrite it with a non-zero value.
+
+- **Found in** `src/curve/BondingCurve.sol` at [Line 142](https://github.com/code-423n4/2024-08-phi/blob/main/src/curve/BondingCurve.sol#L142)
+
+```solidity
+128:    function _getCreatorFee(
+...
+141:        if (supply_ == 0) {
+142: =>             creatorFee = 0; // @audit: set 0 but not return
+143:        }
+144:
+145:        (uint16 buyShareRoyalty, uint16 sellShareRoyalty) = credContract.getCreatorRoyalty(credId_);
+146:
+147:        uint16 royaltyRate = isSign_ ? buyShareRoyalty : sellShareRoyalty;
+148: =>        creatorFee = (price_ * royaltyRate) / RATIO_BASE; // @audit: overides with incorrect value
+149:    }
+```
+
+### Recommendation
+
+Return immediately after setting `creatorFee` to 0 when the supply is zero to prevent it from being overwritten.
