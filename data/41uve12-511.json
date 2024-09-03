@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "41uve12",
+  "risk": "2",
+  "title": "Public visibility of _removeCredIdPerAddress allows unauthorized calls",
+  "issueId": 511,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/511"
+}
