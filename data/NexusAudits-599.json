@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "NexusAudits",
+  "risk": "2",
+  "title": "Public Access to Internal Cred Mappings Enables Unauthorized Manipulation of User Portfolios",
+  "issueId": 599,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/599"
+}
