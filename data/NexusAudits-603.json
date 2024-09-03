@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "NexusAudits",
+  "risk": "2",
+  "title": "Timestamp Manipulation Vulnerability in Signature Expiration Check Leading to Potential DoS Attacks",
+  "issueId": 603,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/603"
+}
