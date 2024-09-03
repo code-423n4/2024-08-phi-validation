@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "kuprum",
+  "risk": "2",
+  "title": "`Cred.sol::createCred` permits cross-chain signature replay",
+  "issueId": 507,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/507"
+}
