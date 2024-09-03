@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "NexusAudits",
+  "risk": "2",
+  "title": "Unaccounted ETH Deposits Lead to Balance Inconsistency and Potential ETH  Lock-up",
+  "issueId": 609,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/609"
+}
