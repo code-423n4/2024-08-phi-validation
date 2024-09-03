@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "minato7namikazi",
+  "risk": "3",
+  "title": "`_executeBatchTrade` function doesn't check if the batch operation would exceed the `MAX_SUPPLY`",
+  "issueId": 480,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/480"
+}
