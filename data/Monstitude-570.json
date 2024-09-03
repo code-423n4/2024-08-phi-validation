@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Monstitude",
+  "risk": "3",
+  "title": "`_addCredIdPerAddress` and `_removeCredIdPerAddress` are public, allowing anyone to add or remove cred ids for an address",
+  "issueId": 570,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/570"
+}
