@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "Falendar",
+  "risk": "3",
+  "title": "Unauthorized Access in the `_addCredIdPerAddress` and `_removeCredIdPerAddress` functions",
+  "issueId": 527,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/527"
+}
