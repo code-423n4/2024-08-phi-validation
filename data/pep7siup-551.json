@@ -1,0 +1,8 @@
+{
+  "contest": 427,
+  "handle": "pep7siup",
+  "risk": "2",
+  "title": "Overriding `createConfig` Parameters Due to Lack of Validation Against Signature, Causing Potential Misuse of Art Creation Configurations",
+  "issueId": 551,
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/551"
+}
