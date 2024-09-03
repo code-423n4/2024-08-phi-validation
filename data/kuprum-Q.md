@@ -146,3 +146,18 @@ Function [RewardControl::withdrawFor](https://github.com/code-423n4/2024-08-phi/
 ### Recommended Mitigation Steps
 
 Remove function `RewardControl::withdrawFor`.
+
+## [L-8] `PhiNFT1155` is not ERC-1155 compliant: `createArtFromFactory` doesn't emit the `TransferSingle` event.
+
+### Links to affected code
+
+- https://github.com/code-423n4/2024-08-phi/blob/8c0985f7a10b231f916a51af5d506dd6b0c54120/src/art/PhiNFT1155.sol#L138-L156
+
+### Impact
+
+According to [ERC-1155](https://eips.ethereum.org/EIPS/eip-1155):
+
+> - A mint/create operation is essentially a specialized transfer and MUST follow these rules:
+>    - To broadcast the existence of a token ID with no initial balance, the contract SHOULD emit the `TransferSingle` event from `0x0` to `0x0`, with the token creator as `_operator`, and a `_value` of 0.
+
+The creation function of the `PhiNFT1155` contract, [createArtFromFactory](https://github.com/code-423n4/2024-08-phi/blob/8c0985f7a10b231f916a51af5d506dd6b0c54120/src/art/PhiNFT1155.sol#L138-L156), doesn't follow this rule, i.e. it doesn't emit the `TransferSingle` event as required, thus making `PhiNFT1155` not ERC-1155 compliant.
