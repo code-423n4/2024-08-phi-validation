@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Create art can be frontruned and lead to lose of funds for artist",
   "issueId": 57,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/57"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/57",
+  "validatedIssueId": 303,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/303"
 }
