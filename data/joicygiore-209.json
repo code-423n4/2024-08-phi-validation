@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "The `CuratorRewardsDistributor::distribute()` function contains a lot of loops and may fail to execute if the number of `Curator Addresses` is large.",
   "issueId": 209,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/209"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/209",
+  "validatedIssueId": 255,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/255"
 }
