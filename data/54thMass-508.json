@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "_updateCuratorShareBalance and _addCredIdPerAddress should be internal (Cred.sol)",
   "issueId": 508,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/508"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/508",
+  "validatedIssueId": 127,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/127"
 }
