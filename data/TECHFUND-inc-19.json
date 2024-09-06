@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Ether received into PhiNFT1155 contract directly is locked permanently",
   "issueId": 19,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/19"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/19",
+  "validatedIssueId": 75,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/75"
 }
