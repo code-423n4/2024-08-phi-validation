@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Users don't get refunds when claiming, which allows other users to claim at a discount",
   "issueId": 539,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/539"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/539",
+  "validatedIssueId": 112,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/112"
 }
