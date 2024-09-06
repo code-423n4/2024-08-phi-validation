@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "`distribute` distribute royaltyFee to `msg.sender` ",
   "issueId": 241,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/241"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/241",
+  "validatedIssueId": 239,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/239"
 }
