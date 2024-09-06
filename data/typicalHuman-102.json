@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "PhiNFT1155 proxy can't be upgraded because the PhiFactory contract doesn't have a function to perform the upgrade.",
   "issueId": 102,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/102"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/102",
+  "validatedIssueId": 277,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/277"
 }
