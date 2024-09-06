@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "In the `Cred`, functions `_addCredIdPerAddress` and `_removeCredIdPerAddress` have public visibility with no access control. Malicious user can use this to stop others from selling cred shares",
   "issueId": 462,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/462"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/462",
+  "validatedIssueId": 149,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/149"
 }
