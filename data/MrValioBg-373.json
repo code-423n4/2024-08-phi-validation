@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Artist should be trusted, however every arbitrary address can become an artist and perform malicious operations.",
   "issueId": 373,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/373"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/373",
+  "validatedIssueId": 189,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/189"
 }
