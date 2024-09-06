@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Any malicious user can DoS share purchasing ",
   "issueId": 419,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/419"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/419",
+  "validatedIssueId": 174,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/174"
 }
