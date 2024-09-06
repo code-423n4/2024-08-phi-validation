@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "When the `claim` function is called with the `MERKLE` verification type, it may not properly update the minted tokens count and may not revert as expected.",
   "issueId": 61,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/61"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/61",
+  "validatedIssueId": 302,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/302"
 }
