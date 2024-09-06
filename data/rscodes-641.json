@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "`updateArtSettings` in `PhiFactory.sol` can still be called even if contract is paused",
   "issueId": 641,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/641"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/641",
+  "validatedIssueId": 84,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/84"
 }
