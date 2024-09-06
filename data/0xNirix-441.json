@@ -4,5 +4,7 @@
   "risk": "3",
   "title": " Inability to Update Protocol Fee Destination in PhiNFT1155 Contracts will result in loss of fees and royalties",
   "issueId": 441,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/441"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/441",
+  "validatedIssueId": 161,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/161"
 }
