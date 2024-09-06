@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "PhiNFT1155 Contract is Not Upgradeable Due to Missing Upgrade Logic in Factory Contract",
   "issueId": 228,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/228"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/228",
+  "validatedIssueId": 246,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/246"
 }
