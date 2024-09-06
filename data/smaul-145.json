@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Reentrancy in _handleTrade() Can Lead to Create Cred with Uninitialized values",
   "issueId": 145,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/145"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/145",
+  "validatedIssueId": 68,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/68"
 }
