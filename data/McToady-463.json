@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Attacker can reenter `Cred::_handleTrade` to bypass `SHARE_LOCK_PERIOD` allowing them to buy a large amount of cred shares, claim the available rewards and then sell all in one tx",
   "issueId": 463,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/463"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/463",
+  "validatedIssueId": 148,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/148"
 }
