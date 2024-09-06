@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "[M-1] Buying a share for someone prevents him from selling shares for a lock period",
   "issueId": 193,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/193"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/193",
+  "validatedIssueId": 262,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/262"
 }
