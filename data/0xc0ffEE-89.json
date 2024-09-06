@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Wrong function visibility allows anyone to add/remove `credId` from any address's list",
   "issueId": 89,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/89"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/89",
+  "validatedIssueId": 286,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/286"
 }
