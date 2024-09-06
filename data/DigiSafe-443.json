@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "[M-8] Missing deadline parameter inside `Cred.sol`'s buy & sell functions",
   "issueId": 443,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/443"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/443",
+  "validatedIssueId": 60,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/60"
 }
