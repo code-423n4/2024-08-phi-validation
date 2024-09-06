@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "DoS in `CuratorRewardsDistributor` due to accumulation of curators with 0 shares in `Cred`",
   "issueId": 93,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/93"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/93",
+  "validatedIssueId": 282,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/282"
 }
