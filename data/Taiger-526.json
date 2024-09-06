@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Unrestricted Cred ID Manipulation Vulnerability",
   "issueId": 526,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/526"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/526",
+  "validatedIssueId": 121,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/121"
 }
