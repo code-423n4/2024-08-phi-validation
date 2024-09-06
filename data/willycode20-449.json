@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Mishandling of ETH in the `phiFactory:claim()`, allowing for ETH to get stucked in the contract and users not getting their refunds",
   "issueId": 449,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/449"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/449",
+  "validatedIssueId": 156,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/156"
 }
