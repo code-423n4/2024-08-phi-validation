@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "`UUPSUpgradeable` is not initialized in `PhiNFT1155` contract",
   "issueId": 208,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/208"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/208",
+  "validatedIssueId": 256,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/256"
 }
