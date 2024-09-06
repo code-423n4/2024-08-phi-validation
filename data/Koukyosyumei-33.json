@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Potential Signature Replay Attack in `withdrawWithSig` Function",
   "issueId": 33,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/33"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/33",
+  "validatedIssueId": 312,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/312"
 }
