@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Artist fees are severely undermined",
   "issueId": 399,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/399"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/399",
+  "validatedIssueId": 181,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/181"
 }
