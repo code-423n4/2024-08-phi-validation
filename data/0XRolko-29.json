@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Poor implementation of the Openzeppelin `UUPSUpgradeable` library, which will cause storage collisions during the update.",
   "issueId": 29,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/29"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/29",
+  "validatedIssueId": 313,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/313"
 }
