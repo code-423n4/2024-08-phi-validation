@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Missing royaltyBPS limit check in CreatorRoyaltiesControl",
   "issueId": 479,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/479"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/479",
+  "validatedIssueId": 138,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/138"
 }
