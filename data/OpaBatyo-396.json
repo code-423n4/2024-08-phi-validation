@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "High computational cost and permanent DoS of credential on distribute",
   "issueId": 396,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/396"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/396",
+  "validatedIssueId": 184,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/184"
 }
