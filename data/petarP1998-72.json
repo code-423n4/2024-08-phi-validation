@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Malicious artist could lock nfts",
   "issueId": 72,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/72"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/72",
+  "validatedIssueId": 296,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/296"
 }
