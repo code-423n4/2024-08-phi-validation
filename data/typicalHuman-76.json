@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Function returns excess ETH to incorrect address",
   "issueId": 76,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/76"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/76",
+  "validatedIssueId": 294,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/294"
 }
