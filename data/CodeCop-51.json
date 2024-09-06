@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Unauthorized Removal of Credential ID Allows Attacker to Disrupt User CRED Share Management",
   "issueId": 51,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/51"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/51",
+  "validatedIssueId": 305,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/305"
 }
