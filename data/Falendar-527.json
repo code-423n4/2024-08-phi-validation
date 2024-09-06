@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Unauthorized Access in the `_addCredIdPerAddress` and `_removeCredIdPerAddress` functions",
   "issueId": 527,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/527"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/527",
+  "validatedIssueId": 120,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/120"
 }
