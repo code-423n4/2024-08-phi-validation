@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Potential Front-Running in Art Creation",
   "issueId": 585,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/585"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/585",
+  "validatedIssueId": 95,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/95"
 }
