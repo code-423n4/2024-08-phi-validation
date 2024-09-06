@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Length of `shareBalance[credId]` in `Cred.sol` can exceed `MAX_SUPPLY` and cause a permanent DoS to rewards distribution, resulting in rewards of that cred to be **forever** stuck in the contract",
   "issueId": 403,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/403"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/403",
+  "validatedIssueId": 179,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/179"
 }
