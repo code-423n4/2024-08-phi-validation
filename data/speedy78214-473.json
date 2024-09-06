@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Lack of Access Control for `CuratorRewardsDistributor::distribute function`",
   "issueId": 473,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/473"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/473",
+  "validatedIssueId": 141,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/141"
 }
