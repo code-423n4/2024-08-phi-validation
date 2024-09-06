@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Artist can front-run NFT sales on secondary markets and inflate royalty BPS to 100% to steal all sale proceeds",
   "issueId": 418,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/418"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/418",
+  "validatedIssueId": 175,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/175"
 }
