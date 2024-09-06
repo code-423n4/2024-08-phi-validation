@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Funds may be irrecoverable from CuratorRewardsDistributor contract due to high gas cost of distribute function",
   "issueId": 537,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/537"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/537",
+  "validatedIssueId": 114,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/114"
 }
