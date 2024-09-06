@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Lack of Storage Gap in Upgradeable Contracts May Lead to Storage Slot Collision",
   "issueId": 547,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/547"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/547",
+  "validatedIssueId": 110,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/110"
 }
