@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Incorrect Fee Handling Prevents Protocol from Updating Fees",
   "issueId": 220,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/220"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/220",
+  "validatedIssueId": 251,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/251"
 }
