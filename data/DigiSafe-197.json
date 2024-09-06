@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "[M-5] Curators may receive rewards after a delay because of an inefficient function that consumes a ton of gas to distribute rewards",
   "issueId": 197,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/197"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/197",
+  "validatedIssueId": 260,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/260"
 }
