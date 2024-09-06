@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "`updateRoyalty` is not distributing first before update the `withdrawRoyalty`",
   "issueId": 252,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/252"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/252",
+  "validatedIssueId": 66,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/66"
 }
