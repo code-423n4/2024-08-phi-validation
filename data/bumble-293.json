@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "`PhiFactory` deployments won't work correctly on ZKsync chain",
   "issueId": 293,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/293"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/293",
+  "validatedIssueId": 223,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/223"
 }
