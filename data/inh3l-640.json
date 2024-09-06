@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Arts cannot be created if protocol is deployed on zkEVMs or zkSync",
   "issueId": 640,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/640"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/640",
+  "validatedIssueId": 85,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/85"
 }
