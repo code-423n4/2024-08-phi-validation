@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Fund get stuck due to improper refunding",
   "issueId": 85,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/85"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/85",
+  "validatedIssueId": 289,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/289"
 }
