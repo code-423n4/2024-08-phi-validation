@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "lack of access control in `CuratorRewardsDistributor:distribute` allows any user to call distrubute and claim ETH dust.",
   "issueId": 86,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/86"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/86",
+  "validatedIssueId": 288,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/288"
 }
