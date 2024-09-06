@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Users can not claim art reward if the recipient is a contract",
   "issueId": 13,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/13"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/13",
+  "validatedIssueId": 319,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/319"
 }
