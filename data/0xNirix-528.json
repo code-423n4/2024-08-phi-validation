@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Mutable soulBounded property in PhiFactory allows unexpected changes to token transferability",
   "issueId": 528,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/528"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/528",
+  "validatedIssueId": 119,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/119"
 }
