@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "mintProtocolFee and artCreateFee cannot be more than 10000 wei",
   "issueId": 667,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/667"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/667",
+  "validatedIssueId": 77,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/77"
 }
