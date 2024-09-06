@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Attacker can set credIdsPerAddressArrLength to 0 so user will be unable to sell all their funds",
   "issueId": 363,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/363"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/363",
+  "validatedIssueId": 197,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/197"
 }
