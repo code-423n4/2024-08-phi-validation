@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "PhiNFT1155 are transferrable even after being paused",
   "issueId": 649,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/649"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/649",
+  "validatedIssueId": 81,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/81"
 }
