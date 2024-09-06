@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Unrestricted Use of Signed Data in Art Creation Process",
   "issueId": 521,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/521"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/521",
+  "validatedIssueId": 124,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/124"
 }
