@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "_removeCredIdPerAddress() is public, but it  should be internal",
   "issueId": 290,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/290"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/290",
+  "validatedIssueId": 224,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/224"
 }
