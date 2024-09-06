@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "PhiNFT1155 created via PhiFactory cannot be updated",
   "issueId": 456,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/456"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/456",
+  "validatedIssueId": 154,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/154"
 }
