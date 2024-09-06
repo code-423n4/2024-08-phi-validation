@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "The createArt() function is vulnerable to cross-chain or same-chain replay attacks, potentially allowing unauthorized duplicative transactions.",
   "issueId": 495,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/495"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/495",
+  "validatedIssueId": 131,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/131"
 }
