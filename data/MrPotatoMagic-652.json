@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Function _removeCredIdPerAddress() is public leading to DOS attacks when users sell shares",
   "issueId": 652,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/652"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/652",
+  "validatedIssueId": 80,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/80"
 }
