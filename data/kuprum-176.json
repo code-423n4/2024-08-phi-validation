@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Explicit `receive` but no `withdraw` in `PhiNFT1155`; funds will be stuck",
   "issueId": 176,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/176"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/176",
+  "validatedIssueId": 267,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/267"
 }
