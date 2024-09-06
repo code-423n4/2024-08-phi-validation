@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Can not update protocol fee and art create fee properly",
   "issueId": 90,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/90"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/90",
+  "validatedIssueId": 285,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/285"
 }
