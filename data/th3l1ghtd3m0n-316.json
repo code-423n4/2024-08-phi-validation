@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "If `PhiFactory` upgrades, the tokens already deployed will be unable to update the `phiFactoryContract` variable to the new implementation",
   "issueId": 316,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/316"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/316",
+  "validatedIssueId": 218,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/218"
 }
