@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Incorrect handling of artCreateFee using Basis Points leads to miscalculated transfers",
   "issueId": 448,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/448"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/448",
+  "validatedIssueId": 157,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/157"
 }
