@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Art creators can update royalties to 100% and front-run NFT sales to pocket the whole sale amount.",
   "issueId": 73,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/73"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/73",
+  "validatedIssueId": 295,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/295"
 }
