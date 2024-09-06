@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Signature Replay Vulnerability in Art Creation",
   "issueId": 643,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/643"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/643",
+  "validatedIssueId": 83,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/83"
 }
