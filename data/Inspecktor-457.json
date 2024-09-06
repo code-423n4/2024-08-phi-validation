@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Possible freezing of funds in the PhiNFT1155.sol contract",
   "issueId": 457,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/457"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/457",
+  "validatedIssueId": 153,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/153"
 }
