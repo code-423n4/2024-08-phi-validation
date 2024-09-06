@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Malicious Actors Can Prevent Share Sales in Cred Contract",
   "issueId": 162,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/162"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/162",
+  "validatedIssueId": 270,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/270"
 }
