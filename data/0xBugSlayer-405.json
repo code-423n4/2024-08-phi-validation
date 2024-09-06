@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "No `protocolFee` upper bound in `Cred` contract",
   "issueId": 405,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/405"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/405",
+  "validatedIssueId": 62,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/62"
 }
