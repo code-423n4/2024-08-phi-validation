@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Frontrunning of reward distribution allows to steal rewards from curators",
   "issueId": 101,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/101"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/101",
+  "validatedIssueId": 278,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/278"
 }
