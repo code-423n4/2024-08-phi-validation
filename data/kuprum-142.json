@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Failure to restrict royalties in `CreatorRoyaltiesControl` may result in large losses for users",
   "issueId": 142,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/142"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/142",
+  "validatedIssueId": 273,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/273"
 }
