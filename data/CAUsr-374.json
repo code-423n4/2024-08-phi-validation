@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Curator rewards distribution may fail due to significant number of shareholders",
   "issueId": 374,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/374"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/374",
+  "validatedIssueId": 188,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/188"
 }
