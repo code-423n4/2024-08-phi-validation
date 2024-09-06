@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "updateRoyalties shhould be called when whenNotPaused.",
   "issueId": 276,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/276"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/276",
+  "validatedIssueId": 230,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/230"
 }
