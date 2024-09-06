@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Protocol's refund mechanism fails to refunds ETH to user, leading to wrongful ETH accumulation and a chance for malicious users to steal victim's ETH to pay for their own claim fees.",
   "issueId": 437,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/437"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/437",
+  "validatedIssueId": 162,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/162"
 }
