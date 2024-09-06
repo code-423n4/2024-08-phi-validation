@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Curator reward distribution is susceptible to whale attacks ",
   "issueId": 397,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/397"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/397",
+  "validatedIssueId": 183,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/183"
 }
