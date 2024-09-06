@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Internal function declared as public allows malicious user to manipulate the mapping `_credIdsPerAddress`.",
   "issueId": 362,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/362"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/362",
+  "validatedIssueId": 198,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/198"
 }
