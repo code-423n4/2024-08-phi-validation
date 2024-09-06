@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "The creator or share buyer could bypass the `SHARE_LOCK_PERIOD` and sell the share immediately after purchasing it.",
   "issueId": 493,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/493"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/493",
+  "validatedIssueId": 132,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/132"
 }
