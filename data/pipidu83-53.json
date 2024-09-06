@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Excess ETH is not refunded when calling `PhiFactory::createArt`",
   "issueId": 53,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/53"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/53",
+  "validatedIssueId": 304,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/304"
 }
