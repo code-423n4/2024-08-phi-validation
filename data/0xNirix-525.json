@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Potential Loss of User Funds Due to Lack of Overpayment Refund in Individual Claim Functions",
   "issueId": 525,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/525"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/525",
+  "validatedIssueId": 122,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/122"
 }
