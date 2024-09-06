@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "`CuratorRewardsDistributor::distribute` can be DoS-ed, leading to loss of user funds",
   "issueId": 44,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/44"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/44",
+  "validatedIssueId": 307,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/307"
 }
