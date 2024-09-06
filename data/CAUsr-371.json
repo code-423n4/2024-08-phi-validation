@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "`mintProtocolFee` and `artCreateFee` setters validate input incorrectly",
   "issueId": 371,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/371"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/371",
+  "validatedIssueId": 190,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/190"
 }
