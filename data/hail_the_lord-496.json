@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "The functions _addCredIdPerAddress() and _removeCredIdPerAddress() have public visibility, allowing malicious users to manipulate the share amounts of any curator.",
   "issueId": 496,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/496"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/496",
+  "validatedIssueId": 130,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/130"
 }
