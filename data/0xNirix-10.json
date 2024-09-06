@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Improper ETH Handling in Claim Function Leading to Potential ETH Accumulation",
   "issueId": 10,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/10"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/10",
+  "validatedIssueId": 320,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/320"
 }
