@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Anyone can call CuratorRewardsDistributor::distribute and claim royalty fee",
   "issueId": 235,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/235"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/235",
+  "validatedIssueId": 243,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/243"
 }
