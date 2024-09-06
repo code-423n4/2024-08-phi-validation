@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Contract `PhiNFT1155` can't be paused",
   "issueId": 172,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/172"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/172",
+  "validatedIssueId": 268,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/268"
 }
