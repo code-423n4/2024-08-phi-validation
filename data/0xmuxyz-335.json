@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Since there is no limitation that how many numbers of curator addresses can be distributed rewards, the TX of the CuratorRewardsDistributor#`distribute()` can be DOSed - due to reaching a gas limit in the `for-loop`",
   "issueId": 335,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/335"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/335",
+  "validatedIssueId": 210,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/210"
 }
