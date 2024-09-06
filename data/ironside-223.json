@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Missing ERC165 interface support in `CreatorRoyaltiesControl`",
   "issueId": 223,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/223"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/223",
+  "validatedIssueId": 67,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/67"
 }
