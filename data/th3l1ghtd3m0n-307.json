@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "PhiFactory wont be able to upgrade NFT",
   "issueId": 307,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/307"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/307",
+  "validatedIssueId": 219,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/219"
 }
