@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "CREATE opcode works differently in the zkSync chain",
   "issueId": 347,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/347"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/347",
+  "validatedIssueId": 206,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/206"
 }
