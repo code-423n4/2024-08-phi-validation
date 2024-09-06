@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "PhiFactory.sol :: createArt() will always revert if a surplus fee is sent, because the contract lacks a receive() or fallback() function to handle the excess ETH.",
   "issueId": 98,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/98"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/98",
+  "validatedIssueId": 280,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/280"
 }
