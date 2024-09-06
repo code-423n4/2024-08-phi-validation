@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Creating Art will revert if Eth sent is greater than create fee",
   "issueId": 17,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/17"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/17",
+  "validatedIssueId": 317,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/317"
 }
