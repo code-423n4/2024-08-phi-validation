@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Bypass createArt signature verification to create duplicate art to steal receiver reward",
   "issueId": 434,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/434"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/434",
+  "validatedIssueId": 163,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/163"
 }
