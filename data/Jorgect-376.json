@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "createArt function has the whenNotPaused modifier, but updateArtSettings",
   "issueId": 376,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/376"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/376",
+  "validatedIssueId": 64,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/64"
 }
