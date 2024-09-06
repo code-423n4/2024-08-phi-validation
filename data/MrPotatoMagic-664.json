@@ -4,5 +4,7 @@
   "risk": "2",
   "title": "Refunds are not correctly handled and would be locked in PhiNFT1155.sol contract instances and PhiFactory",
   "issueId": 664,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/664"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/664",
+  "validatedIssueId": 78,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/78"
 }
