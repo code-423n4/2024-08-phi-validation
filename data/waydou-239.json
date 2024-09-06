@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "`_removeCredIdPerAddress` and `_addCredIdPerAddress` are public, allowing unauthorized manipulation of user credentials",
   "issueId": 239,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/239"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/239",
+  "validatedIssueId": 240,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/240"
 }
