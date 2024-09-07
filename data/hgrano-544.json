@@ -4,5 +4,7 @@
   "risk": "G",
   "title": "Gas Optimizations",
   "issueId": 544,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/544"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/544",
+  "validatedIssueId": 330,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/330"
 }
