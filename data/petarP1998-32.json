@@ -4,5 +4,7 @@
   "risk": "Q",
   "title": "QA Report",
   "issueId": 32,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/32"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/32",
+  "validatedIssueId": 364,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/364"
 }
