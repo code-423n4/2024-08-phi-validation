@@ -4,5 +4,7 @@
   "risk": "3",
   "title": "Unsanitized Input in mint() Allows JSON Injection, Compromising NFT Metadata Integrity",
   "issueId": 634,
-  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/634"
+  "issueUrl": "https://github.com/code-423n4/2024-08-phi-validation/issues/634",
+  "validatedIssueId": 383,
+  "validatedIssueUrl": "https://github.com/code-423n4/2024-08-phi-findings/issues/383"
 }
