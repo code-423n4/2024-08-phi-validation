@@ -1,0 +1,622 @@
+issue,title,primary finding,validator comment,status,root cause (URL),size,id-temp,primary-temp,su
+findings-10,Lack of functionality Prevents Upgrades in PhiNFT1155 Contracts,findings-10,owner cannot call function,Satisfactory,,,1010,1010,S
+findings-11,Refunds sent to incorrect addresses in certain cases,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,1011,1011,S
+findings-12,Hardcoded Fee Destination in PhiNFT1155/CreatorRoyaltiesControl Contracts Risks Misallocated or loss of Funds,validation-549,qa,Satisfactory,,,1012,549,S
+findings-13,Incorrect Fee Calculation in getArtMintFee and createArtFromFactory Leads to Undercharging,findings-13,incorrect calculation of bp,Satisfactory,,,1013,1013,S
+findings-14,Unrestricted Changes to Token Settings Allow Artists to Alter Critical Features,findings-14,"inherent centralization risk, qa or m",Satisfactory,,,1014,1014,S
+findings-15,"The Cred::_addCredIdPerAddress is publicly exposed, because its visibility is incorrectly specified",findings-51,visibility,Satisfactory,,,1015,1051,S
+findings-16,"The whole Cred.sol contract can become unusable and unrecoverable, because the _removeCredIdPerAddress function has public visibility",findings-51,visibility,Satisfactory,,,1016,1051,S
+findings-17,"The SHARE_LOCK_PERIOD can be bypassed, and shares can be bought and sold during the same transaction immediately",findings-25,reentracncy,Satisfactory,,,1017,1025,S
+findings-18,PhiNFT1155 contract not EIP-1155 compliant,findings-18,don’t emit erc1155 event,Satisfactory,,,1018,1018,S
+findings-19,Claim Function Fails to Refund Excess ETH Correctly,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,1019,1011,S
+findings-20,Anyone can DOS user cred sales/unsignaling,findings-51,visibility,Satisfactory,,,1020,1051,S
+findings-21,Attacker can manipulate  flashloan protection to steal rewards from other users during reward distribution,findings-25,reentracncy,Satisfactory,,,1021,1025,S
+findings-22,Refunding excess payment for minting art will fail since the `PhiFactory` contract lacks the receive/fallback function,findings-11,and it will revert,Satisfactory,,,1022,1011,S
+findings-24,Insufficient Signature Verification Allows Unauthorized and Multiple Art Creations,validation-131,replay & lack of validation,Satisfactory,,,1024,131,S
+findings-25,"Reentrancy Vulnerability Allows Bypass of Cooldown, Leading to Unfair Reward Extraction Through Flash Loan",findings-25,reentracncy,Satisfactory,,,1025,1025,S
+findings-26,Potential MEV attack due to improper implementation of ````CuratorRewardsDistributor.distribute()````,findings-26,distribute mev,Satisfactory,,,1026,1026,S
+findings-27,No access control on function CuratorRewardsDistributor::distribute allows anyone to distribute rewards and take royalty fees,findings-27,it is not dust,Satisfactory,,,1027,1027,S
+findings-28,"When `PhiFactory.claim` function is called with a `msg.value` that is more than total mint fee, the difference between such `msg.value` and total mint fee cannot be refunded to caller of such function",findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,1028,1011,S
+findings-29,`Claimable.signatureClaim` or `Claimable.merkleClaim` function caller fails to receive refund of difference between `msg.value` and total mint fee,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,1029,1011,S
+findings-3,`claim` function: Excess ether did not return to the user,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,1003,1011,S
+findings-30,`CuratorRewardsDistributor.distribute` function incorrectly emits `distributeAmount` though it should emit `actualDistributeAmount` instead for `RewardsDistributed` event's `distributeAmount` data,findings-30,no impact,Unsatisfactory,,,1030,,U
+findings-31,Signature that corresponds to `signedData_` used for calling `Cred.createCred` function can be replayed to create multiple new creds,findings-31,sender is checked,Unsatisfactory,,,1031,,U
+findings-32,`PhiFactory.createArt` function is DOS'ed when it is called with a `msg.value` that is more than art creation fee even though it is supposed to finish art creation process and refund difference between such `msg.value` and art creation fee to its caller,findings-11,and it will revert,Satisfactory,,,1032,1011,S
+findings-33,`PhiFactory.setProtocolFee` function is always DOS'ed when there is a need for setting `mintProtocolFee` to a normal protocol mint fee value in ETH,findings-13,incorrect calculation of bp,Satisfactory,,,1033,1013,S
+findings-34,Signature corresponding to a used `signedData_` can be replayed to update an existing cred for multiple times through calling `Cred.updateCred` function,findings-34,sender is checked,Unsatisfactory,,,1034,,U
+findings-35,"`RewardControl.withdrawFor` function can be called without `from` address' authorization, which can frontrun and DOS `from` address' `RewardControl.withdraw` function call and trigger `from` address' `receive` function's logics without its approval",findings-35,intended behavior,Unsatisfactory,,,1035,,U
+findings-36,`PhiFactory.setArtCreatFee` function is always DOS'ed when `artCreateFee` needs to be set to a normal art creation fee value in ETH,findings-13,incorrect calculation of bp,Satisfactory,,,1036,1013,S
+findings-37,Signature associated with a used `encodeData_` for calling `PhiFactory.signatureClaim` function can be replayed to claim an art repeatedly,findings-37,intended behavior,Unsatisfactory,,,1037,,U
+findings-38,`PhiRewards.depositRewards` function's restriction on self-referral would become ineffective when minter controls and uses another address as referrer,findings-38,intended behavior,Unsatisfactory,,,1038,,U
+findings-39,Used Merkle proof can be replayed to claim corresponding art for multiple times,findings-39,intended behavior,Unsatisfactory,,,1039,,U
+findings-4,The results of batch acquisition of buy and sell prices are inaccurate,findings-4,invalid,Unsatisfactory,,,1004,,U
+findings-40,Signature corresponding to used `signedData_` can be replayed by calling `PhiFactory.createArt` function for multiple times to create multiple arts,validation-131,lack of details,Satisfactory,,,1040,131,S
+findings-41,`PhiFactory.signatureClaim` and `PhiFactory.merkleClaim` functions lack slippage controls for specifying maximum total mint fee that respective function caller is willing to pay,findings-14,msg.value itself can serve for slippage control purpose,Satisfactory,,,1041,1014,S
+findings-42,DOS of distribute for as long as the attacker wants to trap other cred holders,validation-372,unbounded array lead to unbounded gas,Satisfactory,,,1042,372,S
+findings-43,Malicious user can use up refunded ether in the phiFactory contract to mint arts at zero cost,findings-11,and/or steal the excessive fund,Satisfactory,,,1043,1011,S
+findings-44,"_initializePhiArt: `credMerkleRoot[credChainId][credId]` can be overwritten, potentially locking out previous art creators from claiming",findings-44,"invalid, creddata is signed",Unsatisfactory,,,1044,,U
+findings-45,"User can claim art NFTs without paying `mintFee`, stealing ETH from PhiFactory",findings-11,and/or steal the excessive fund,Satisfactory,,,1045,1011,S
+findings-46,Curator Blocked from Selling Last Share Due to Exploitation of `_removeCredIdPerAddress` public function,findings-51,visibility,Satisfactory,,,1046,1051,S
+findings-47,"User can buy and sell cred share in one tx, violating `SHARE_LOCK_PERIOD`",findings-25,reentracncy,Satisfactory,,,1047,1025,S
+findings-49,Cred creator can reenter buyShareCred function to get a better deal instead of buying all at once,findings-49,inconsistent price calc,Satisfactory,,,1049,1049,S
+findings-5,"When you help other users purchase shares, the user's lock time will be refreshed, which may cause a DoS attack.",validation-619,grief dos,Satisfactory,,,1005,619,S
+findings-50,Minter can take credCreator/verifier reward share,findings-50,intended behavior,Unsatisfactory,,,1050,,U
+findings-51,Exposed `_removeCredIdPerAddress` & `_addCredIdPerAddress` allows anyone to cause issues to current holders as well as upcoming ones,findings-51,visibility,Satisfactory,,,1051,1051,S
+findings-6,"When claiming, there is no check on the quantity",findings-6,intended behavior,Unsatisfactory,,,1006,,U
+findings-7,The factory contract cannot receive payments from the NFT contract,findings-11,and it will revert,Satisfactory,,,1007,1011,S
+findings-8,NFT1155 contract cannot be upgraded,findings-10,owner cannot call function,Satisfactory,,,1008,1010,S
+validation-10,Improper ETH Handling in Claim Function Leading to Potential ETH Accumulation,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,10,1011,S
+validation-100, Malicious User Can Use flashloan attack to get majority of the PhiRewards,findings-25,reentracncy,Satisfactory,,,100,1025,S
+validation-101,Frontrunning of reward distribution allows to steal rewards from curators,findings-26,distribute mev,Satisfactory,,,101,1026,S
+validation-102,PhiNFT1155 proxy can't be upgraded because the PhiFactory contract doesn't have a function to perform the upgrade.,findings-10,owner cannot call function,Satisfactory,,,102,1010,S
+validation-103,Bonding curve calculations fail at maximum supply due to division by 0,validation-103,intended behavior,Unsatisfactory,,,103,,U
+validation-104,"Precision loss in share lock period by an off-by-one error, which enables early trading",validation-104,no impact,Unsatisfactory,,,104,,U
+validation-106,Attacker will mint creds with incorrect `credIdCounter` due to lack of error handling,validation-106,invalid,Unsatisfactory,,,106,,U
+validation-107,Missing Access Control on _updateRoyalties,validation-107,insufficient quality,Unsatisfactory,,,107,,U
+validation-108,Creator will set invalid royalty percentages affecting buyers and sellers,validation-108,no impact,Unsatisfactory,,,108,,U
+validation-110,balance check came late and can be front runned by a bad user,validation-110,insufficient quality,Unsatisfactory,,,110,,U
+validation-111,Any user can withdraw funds from any account via `RewardControl::withdrawFor()`,validation-111,intended behavior,Unsatisfactory,,,111,,U
+validation-112,Sellers will receive undervalued prices for their tokens due to incorrect sell price calculation (`BondingCurve::getSellPrice`),validation-112,invalid,Unsatisfactory,,,112,,U
+validation-113,Caller can steal royalty fees and rounding errors in `CuratorRewardsDistributor::distribute()`,findings-27,it is not dust,Satisfactory,,,113,1027,S
+validation-114,Users will overpay for minting due to double counting of `mintFee_` (`PhiRewards::handleRewardsAndGetValueSent`),validation-114,invalid,Unsatisfactory,,,114,,U
+validation-115,"Malicious User Can Mint Multiple Times for the Same Art, Bypassing Intended Restrictions (`PhiFactory::_validateAndUpdateClaimState`)",validation-115,invalid,Unsatisfactory,,,115,,U
+validation-116,Incorrect Fee Distribution will lead to Financial Loss for Art Creators (`PhiFactory::_processClaim`),validation-116,invalid,Unsatisfactory,,,116,,U
+validation-117,Attacker can bypass signature verification to mint unauthorized NFTs (PhiFactory::signatureClaim),validation-117,invalid,Unsatisfactory,,,117,,U
+validation-118,Inconsistent State Management in `Cred::_removeCredIdPerAddress()` Can Lead to Incorrect User Holdings,validation-118,invalid,Unsatisfactory,,,118,,U
+validation-12,Claimants can lose all their additional rewards,validation-12,no impact,Unsatisfactory,,,12,,U
+validation-120,Attacker can drain funds and manipulate share balances through reentrancy in `Cred::buyShareCred()` and `Cred::sellShareCred()`,validation-120,insufficient quality but worth checking,Satisfactory,,,120,120,S
+validation-121,Bypassing `SHARE_LOCK_PERIOD` allows rapid trading and market manipulation (Cred::_handleTrade),validation-121,insufficient quality,Unsatisfactory,,,121,,U
+validation-122,Inconsistent State Management in `Cred` Contract Can Lead to Incorrect Reporting of Curator Holdings (Cred::_handleTrade and Cred::_updateCuratorShareBalance),validation-122,invalid,Unsatisfactory,,,122,,U
+validation-123,Incorrect Initial Share Assignment in `createCred` Function Will Lead to Misallocation of Shares (Cred::createCred),validation-123,invalid,Unsatisfactory,,,123,,U
+validation-124,Wrong visibility in Cred.sol::_removeCredIdPerAddress() function can prevent users to sell their shares,findings-51,visibility,Satisfactory,,,124,1051,S
+validation-125,Unchecked Return Value in External Call to CuratorRewardsDistributor,validation-125,invalid,Unsatisfactory,,,125,,U
+validation-126,Unchecked Return Value of Low-Level Call Leading to Potential Data Inconsistency,validation-126,invalid,Unsatisfactory,,,126,,U
+validation-128,abi.encodePacked()` should not be used with dynamic types when passing the result to a hash function such as `keccak256()`,validation-128,no impact,Unsatisfactory,,,128,,U
+validation-129,Incorrect refund calculation in `batchBuyShareCred` function will result in loss of funds for users,validation-129,invalid,Unsatisfactory,,,129,,U
+validation-13,Users can not claim art reward if the recipient is a contract,validation-577,smart contract wallet,Satisfactory,,,13,577,S
+validation-130,Protocol will lose protocol fees on cred creation,validation-130,invalid,Unsatisfactory,,,130,,U
+validation-131,Signature replay in `createArt` allows to impersonate artist and steal royalties,validation-131,replay & lack of validation,Satisfactory,,,131,131,S
+validation-132,"Looping Through credIds Array to Check for Duplicates in _validateAndCalculateBatch Function is a Potential DoS Vector, Increasing Gas Costs for Larger Batches",validation-369,no impact,Unsatisfactory,,,132,369,U
+validation-133,Incorrect refund calculation in `batchBuyShareCred` function will lead to loss of funds for the contract,validation-133,invalid,Unsatisfactory,,,133,,U
+validation-134,Remove immutable Keyword and Change to constant for Upgradeable Contract Support,validation-134,qa,Satisfactory,,,134,134,S
+validation-135,Users will lose funds due to excess `msg.value` not being refunded in `batchBuyShareCred`,validation-135,invalid,Unsatisfactory,,,135,,U
+validation-136,The SHARE_LOCK_PERIOD check can be bypassed by `re-entrancy` vulnerability in the function `_handleTrade`,findings-25,reentracncy,Satisfactory,,,136,1025,S
+validation-137,Caller will receive excess ETH from `batchSellShareCred` function,validation-137,invalid,Unsatisfactory,,,137,,U
+validation-138,Reentrancy Vulnerability in distribute Function,validation-138,no description of valid attack path,Unsatisfactory,,,138,,U
+validation-139,`protocolFee` deduction prevents NFT claim despite sufficient ETH sent,validation-139,invalid,Unsatisfactory,,,139,,U
+validation-14,Cred contract has Multiple Calls in a Single Transaction for getBatchBuyPrice function,validation-14,invalid,Unsatisfactory,,,14,,U
+validation-140,Claims processed after expiration could lead to unauthorized minting,validation-140,invalid,Unsatisfactory,,,140,,U
+validation-141,"Without proper signature validation, unauthorized claims might be processed",validation-141,invalid,Unsatisfactory,,,141,,U
+validation-142,Failure to restrict royalties in `CreatorRoyaltiesControl` may result in large losses for users,findings-14,"no cap on royalty, some mentions the way artist can harm user, some not",Satisfactory,,,142,1014,S
+validation-143,Signature Is Not Verified Allowing To Use Same Signature Multiple Times For Cred Creation,validation-143,intended behavior,Unsatisfactory,,,143,,U
+validation-145,Reentrancy in _handleTrade() Can Lead to Create Cred with Uninitialized values,validation-145,unclear impact,Satisfactory,,,145,145,S
+validation-147,processClaim function can return excess ETH to the incorrect address,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,147,1011,S
+validation-148,Missing check on creator address can allow setting arbitrary creator address set resulted steal of creatorFee or potential DOS,validation-494,QA,Satisfactory,,,148,494,S
+validation-149,Potential Risk of Unintentional Full Balance Withdrawal in withdraw Function,validation-149,intended behavior,Unsatisfactory,,,149,,U
+validation-15,Cred contract has Multiple Calls in a Single Transaction in function getBatchSellPrice,validation-15,invalid,Unsatisfactory,,,15,,U
+validation-152,Curator will receive incorrect amount of Ether when selling share cred,validation-152,invalid,Unsatisfactory,,,152,,U
+validation-153,Inconsistent Buy and Sell Prices Allow Exploitation,validation-153,invalid,Unsatisfactory,,,153,,U
+validation-154,use of msgSender instead of msg.sender,validation-154,no impact,Unsatisfactory,,,154,,U
+validation-156,Potential Denial of Service (DoS) Vulnerability in depositBatch Function Due to Optional reasons Parameter,validation-156,insufficient quality,Unsatisfactory,,,156,,U
+validation-157, Lack of Recipient Address Verification in depositBatch Function,validation-157,invalid,Unsatisfactory,,,157,,U
+validation-159,Report on Potential Vulnerability in withdrawWithSig Function Due to Deadline Handling,validation-159,no impact,Unsatisfactory,,,159,,U
+validation-16,Cred contract has Unprotected Function _addCredIdPerAddress,findings-51,visibility,Satisfactory,,,16,1051,S
+validation-162,Malicious Actors Can Prevent Share Sales in Cred Contract,findings-51,visibility,Satisfactory,,,162,1051,S
+validation-164,Denial of Service (DOS) Vulnerability in Cred Smart Contract's `_addCredIdPerAddress` Function,validation-164,insufficient quality,Unsatisfactory,,,164,,U
+validation-165,Reentrancy on `Cred::_createCredInternal` allow cred creator to frontrun early share,findings-49,inconsistent price calc,Satisfactory,,,165,1049,S
+validation-166,The adversary can steal the royalty fee by using the credId,validation-166,insufficient quality,Unsatisfactory,,,166,,U
+validation-167,Incorrect `endTime` validation during art creation,validation-167,no impact,Unsatisfactory,,,167,,U
+validation-168,Invalid time range set in `updateArtSettings()`,validation-168,invalid,Unsatisfactory,,,168,,U
+validation-17,Creating Art will revert if Eth sent is greater than create fee,findings-11,and it will revert,Satisfactory,,,17,1011,S
+validation-171,Handling of royaltyInfo for Non-Initialized Contracts:,validation-171,insufficient quality,Unsatisfactory,,,171,,U
+validation-172,Contract `PhiNFT1155` can't be paused,validation-440,qa,Satisfactory,,,172,440,S
+validation-173,Validation in _updateRoyalties function,validation-173,insufficient quality,Unsatisfactory,,,173,,U
+validation-174,`PhiFactory::merkleClaim()` is Vulnerable to Replay Attacks Due to Insufficient Validation,validation-174,"intended behavior, no mention of crosschain",Unsatisfactory,,,174,,U
+validation-175,`PhiFactory::signatureClaim()` is Vulnerable to Replay Attacks Due to Insufficient Validation,validation-175,"intended behavior, no mention of crosschain",Unsatisfactory,,,175,,U
+validation-176,Explicit `receive` but no `withdraw` in `PhiNFT1155`; funds will be stuck,validation-19,qa,Satisfactory,,,176,19,S
+validation-177,Rewards can be sweeped pre-maturely because of missing check with closing the reward period.,validation-177,invalid,Unsatisfactory,,,177,,U
+validation-178, Reward distribution is still vulnerable to flash loan attacks,findings-25,reentracncy,Satisfactory,,,178,1025,S
+validation-179,Attacker will manipulate the PhiRewards contract balance by exploiting the incorrect handling of curator rewards,validation-179,invalid,Unsatisfactory,,,179,,U
+validation-18,Anyone outside of Phi ecosystem can benefit from rewards,findings-27,it is not dust,Satisfactory,,,18,1027,S
+validation-180,"The `_curve` function in the `BondingCurve` contract contains critical vulnerabilities that could lead to division by zero, overflow, and underflow issues. These vulnerabilities could potentially be exploited to manipulate token prices or cause denial of service.",validation-180,no impact,Unsatisfactory,,,180,,U
+validation-181,"The `BondingCurve::getPrice()` function issues could lead to incorrect pricing, potential exploits, and unexpected behavior. ",validation-181,gpt,Unsatisfactory,,,181,,U
+validation-183,Missing `verificationType` validation in `signatureClaim()` allows for incorrect claims,validation-183,intended behavior,Unsatisfactory,,,183,,U
+validation-185,`PhiFactory::createArt()` is vulnerable to replay attacks due to insufficient validation.,validation-131,replay & lack of validation,Satisfactory,,,185,131,S
+validation-186,EIP-1155 standard,validation-186,no impact,Unsatisfactory,,,186,,U
+validation-188,Anyone can acquire unlimited Cred,findings-51,visibility,Satisfactory,,,188,1051,S
+validation-189,Reentrancy Protection,validation-189,no description of valid attack path,Unsatisfactory,,,189,,U
+validation-19,Ether received into PhiNFT1155 contract directly is locked permanently,validation-19,qa,Satisfactory,,,19,19,S
+validation-192,Mint protocol fees can not be updated due to an incorrect upper limit,findings-13,incorrect calculation of bp,Satisfactory,,,192,1013,S
+validation-193,Buying a share for someone prevents him from selling shares for a lock period,validation-619,grief dos,Satisfactory,,,193,619,S
+validation-194,"`PhiFactory.sol:claim` passes only the mint fee, which accumulates ether in the contract and gives opportunity for free mint by anyone",findings-11,and/or steal the excessive fund,Satisfactory,,,194,1011,S
+validation-195,User can set his other address as a referral and claim NFT with a discount,validation-195,"ref is used by frontends, intended behavior",Unsatisfactory,,,195,,U
+validation-196,Users can claim tokens with the same signature,validation-196,"intended behavior, no mention of crosschain",Unsatisfactory,,,196,,U
+validation-197,Curators may receive rewards after a delay because of an inefficient function that consumes a ton of gas to distribute rewards,validation-372,unbounded array lead to unbounded gas,Satisfactory,,,197,372,S
+validation-198,Missing `UUPSUpgradeable` initialization may potentially impact upgrades,findings-10,owner cannot call function,Satisfactory,,,198,1010,S
+validation-199,Cred.sol :: createCred() a user can create as many Cred as they want within the allowed time range.,validation-199,intended behavior,Unsatisfactory,,,199,,U
+validation-20,`SHARE_LOCK_PERIOD` affects existing shares,validation-619,grief dos,Satisfactory,,,20,619,S
+validation-201, Missing whenNotPaused modifier in safeBatchTransferFrom and safeTransferFrom,validation-201,no impact,Unsatisfactory,,,201,,U
+validation-202,Missing pause modifier on claim and batchClaim(),validation-202,insuficcient quality,Unsatisfactory,,,202,,U
+validation-204,"`PhiFactory::claim` Lacks ETH Validation, Leading to Unreturned Funds and Free Mints",findings-11,and/or steal the excessive fund,Satisfactory,,,204,1011,S
+validation-205,Users can avoid paying `creatorFee` during minting,findings-11,and/or steal the excessive fund,Satisfactory,,,205,1011,S
+validation-206,`CuratorRewardsDistributor::distribute` Results in Unfair Distribution of Curator Rewards,validation-206,"intended behavior, mitigated by sell lock period",Unsatisfactory,,,206,,U
+validation-207,Creator fee calculation bypass in `_getCreatorFee` can lead to unexpected fees on zero supply,validation-207,known issue 7,Unsatisfactory,,,207,,U
+validation-208,`UUPSUpgradeable` is not initialized in `PhiNFT1155` contract,findings-10,owner cannot call function,Satisfactory,,,208,1010,S
+validation-209,The `CuratorRewardsDistributor::distribute()` function contains a lot of loops and may fail to execute if the number of `Curator Addresses` is large.,validation-372,unbounded array lead to unbounded gas,Satisfactory,,,209,372,S
+validation-210,Validation to avoid dividing by zero,validation-210,no impact,Unsatisfactory,,,210,,U
+validation-211,Signature replay in `signatureClaim` results in unauthorized claiming of rewards,validation-470,chainid is included in sig but not verified,Satisfactory,,,211,470,S
+validation-212,reentrancy attack,validation-212,no description of valid attack path,Unsatisfactory,,,212,,U
+validation-214,Attacker will bypass signature verification to create malicious creds,validation-214,invalid,Unsatisfactory,,,214,,U
+validation-215,`CuratorRewardsDistributor.sol#distribute()` may DOS.,validation-372,unbounded array lead to unbounded gas,Satisfactory,,,215,372,S
+validation-216,Attacker will bypass signature verification to create unauthorized creds,validation-216,known issue 5,Unsatisfactory,,,216,,U
+validation-217,Unbounded loops in distribute Function in CuratorRewardsDistributor.sol contract,validation-372,unbounded array lead to unbounded gas,Satisfactory,,,217,372,S
+validation-218,Unlimited Art Creation for Single Credential Due to Reusable Signature,validation-218,insuficcient quality,Unsatisfactory,,,218,,U
+validation-22,"Users can create art with expired signatures, bypassing the intended time restrictions.",validation-22,invalid,Unsatisfactory,,,22,,U
+validation-220,Incorrect Fee Handling Prevents Protocol from Updating Fees,findings-13,incorrect calculation of bp,Satisfactory,,,220,1013,S
+validation-221,Uncapped `mintFee` allows frontrunning attacks on large buy orders,findings-14,mintfee updated by artist,Satisfactory,,,221,1014,S
+validation-222,Refund sent to contract instead of user in `PhiFactory::_processClaim`,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,222,1011,S
+validation-223,Missing ERC165 interface support in `CreatorRoyaltiesControl`,validation-223,ERC165,Satisfactory,,,223,223,S
+validation-224,Cred trades succeeds despite priceLimit being 0,validation-224,intended behavior,Unsatisfactory,,,224,,U
+validation-225,Creating new NFT contract using `PhiFactory::createArt` would fail if `msg.value` exceed the `artCreateFee` amount,findings-11,and it will revert,Satisfactory,,,225,1011,S
+validation-226,Adding new art on existing NFT contract using `PhiFactory::createArt` would fail if `msg.value` exceed the `artCreateFee` amount,findings-11,and it will revert,Satisfactory,,,226,1011,S
+validation-228,PhiNFT1155 Contract is Not Upgradeable Due to Missing Upgrade Logic in Factory Contract,findings-10,owner cannot call function,Satisfactory,,,228,1010,S
+validation-23,"`CreateArt` Function (where `block.timestamp` is greater than `config.endTime)`, but the function did not revert as expected.",validation-23,invalid,Unsatisfactory,,,23,,U
+validation-230,"Whether buying or selling, the SHARE_LOCK_PERIOD check is an important prerequisite",validation-230,intended behavior,Unsatisfactory,,,230,,U
+validation-231,Improper Validation in `batchClaim` Function Allows NFT Minting Bypass,validation-231,no impact,Unsatisfactory,,,231,,U
+validation-232,Curator can buy shares for themselves without updating their share balance,validation-232,invalid,Unsatisfactory,,,232,,U
+validation-233,Missing fallback / receive function will transaction revert on createArt() function call,findings-11,and it will revert,Satisfactory,,,233,1011,S
+validation-234,Reentrancy in Cred::buyShareCred allows to bypass Cred::SHARE_LOCK_PERIOD,findings-25,reentracncy,Satisfactory,,,234,1025,S
+validation-235,Anyone can call CuratorRewardsDistributor::distribute and claim royalty fee,findings-27,it is not dust,Satisfactory,,,235,1027,S
+validation-236,PhiNFT1155.sol does not inherit from IPhiNFT1155Ownable interface,validation-236,no impact,Unsatisfactory,,,236,,U
+validation-237,Fees PhiFactory::artCreateFee and PhiFactory::mintProtocolFee are very low,findings-13,incorrect calculation of bp,Satisfactory,,,237,1013,S
+validation-238,PhiFactory::claim surplus funds are handled wrong,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,238,1011,S
+validation-239,"`_removeCredIdPerAddress` and `_addCredIdPerAddress` are public, allowing unauthorized manipulation of user credentials",findings-51,visibility,Satisfactory,,,239,1051,S
+validation-24,Critical State-Changing Functions Are Marked as Public Instead of Internal or Private,findings-51,visibility,Satisfactory,,,24,1051,S
+validation-240,Incorrect Supply Update Allows Manipulation of Cred Shares,validation-240,invalid,Unsatisfactory,,,240,,U
+validation-241,`distribute` distribute royaltyFee to `msg.sender` ,findings-27,it is not dust,Satisfactory,,,241,1027,S
+validation-242,Changing the protocolFeeDestination in PhiFactory will DoS fee receving in PhiNFT1155,validation-549,qa,Satisfactory,,,242,549,S
+validation-243,(Denial of Service) `protocolFeeDestination` may block user actions,validation-243,no impact,Unsatisfactory,,,243,,U
+validation-244,Potential for Stuck Eth and underpayment for minting due to improper msg.value check in PhiFactory,findings-11,and/or steal the excessive fund,Satisfactory,,,244,1011,S
+validation-245,Potential DoS in Art Creation Due to Predictable `cloneDeterministic` Addresses,validation-245,invalid,Unsatisfactory,,,245,,U
+validation-246,`PhiFactory::setProtocolFee` and `PhiFactory::setArtCreateFee` Misinterpret Fee Parameters as Percentages Instead of Absolute Values,findings-13,incorrect calculation of bp,Satisfactory,,,246,1013,S
+validation-248,The protocol is handling unsafe the `createCred` signature allowing an attacker to drain funds,validation-248,invalid,Unsatisfactory,,,248,,U
+validation-249,`distribute` function can be DoS because curators array can grow indefinitely,validation-372,unbounded array lead to unbounded gas,Satisfactory,,,249,372,S
+validation-25,"Anyone can create art with expired signatures, bypassing the intended time restriction.",validation-25,invalid,Unsatisfactory,,,25,,U
+validation-250,"Attacker can front run the `createArt` function and change the config,",validation-131,"frontrun, it is permissionless but 'artist' should be verified",Satisfactory,,,250,131,S
+validation-251,`signatureClaim()` is vulnerable to signature replay,validation-251,"intended behavior, no mention of crosschain",Unsatisfactory,,,251,,U
+validation-252,`updateRoyalty` is not distributing first before update the `withdrawRoyalty`,validation-252,qa,Satisfactory,,,252,252,S
+validation-255,"When using initialize, you need to call the initialize method in each Base contract yourself.",validation-255,insufficient quality,Unsatisfactory,,,255,,U
+validation-257,Unchecked output of the ECDSA recover function,validation-257,insufficient quality,Unsatisfactory,,,257,,U
+validation-259,Lack of `credData` validation during Art initialization may result in potential issues,validation-259,"qa, known issue 7",Unsatisfactory,,,259,,U
+validation-260,No array length check in _validateAndCalculateBatch,validation-369,no impact,Unsatisfactory,,,260,369,U
+validation-261,contractURI in PhiFactory.sol will revert when nftAddress is equal to zero,validation-261,no impact,Unsatisfactory,,,261,,U
+validation-262,Anyone can call distribute in CuratorRewardsDistributor.sol to receive royaltyfee,findings-27,it is not dust,Satisfactory,,,262,1027,S
+validation-263,No arraay length check in _executeBatchTrade.,validation-263,invalid,Unsatisfactory,,,263,,U
+validation-264,Missing limit about protocolFee and artCreateFee when the PhiFactory contract first initialize,validation-264,no impact,Unsatisfactory,,,264,,U
+validation-265,wrong implement of getPositionsForCurator,validation-95,it will revert?,Satisfactory,,,265,95,S
+validation-266,wrong implement of getCredBuyPrice,validation-266,invalid,Unsatisfactory,,,266,,U
+validation-267,updateArtSettings should be having  whenNotPaused,validation-376,qa,Satisfactory,,,267,376,S
+validation-268,"use address(this) instead of ""this""  in claim.",validation-268,invalid,Unsatisfactory,,,268,,U
+validation-269,Potential for Reward Misattribution in `handleRewardsAndGetValueSent` due to lack of access control and artId and credId correlation check,validation-269,no impact,Unsatisfactory,,,269,,U
+validation-27,PhiFactory contract has faulty nonReentrant Modifier Implementation,validation-27,invalid,Unsatisfactory,,,27,,U
+validation-270,PhiRewards should have a widhraw function as its payable.,validation-270,no impact,Unsatisfactory,,,270,,U
+validation-271,Minter status incorrectly updated when mint fails in art contract,validation-271,invalid,Unsatisfactory,,,271,,U
+validation-272,distribute should revert when userRewards is zero.,validation-272,no impact,Unsatisfactory,,,272,,U
+validation-273,Missing access control on `PhiRewards::handleRewardsAndGetValueSent` makes the event `RewardsDeposit` can maliciously emitted,validation-273,no impact,Unsatisfactory,,,273,,U
+validation-275,In getPriceData  we doesnot check whether credId_ exist.,validation-275,no impact,Unsatisfactory,,,275,,U
+validation-276,updateRoyalties shhould be called when whenNotPaused.,validation-376,qa,Satisfactory,,,276,376,S
+validation-277,wrong implement of withdrawFor.,validation-277,intended behavior,Unsatisfactory,,,277,,U
+validation-278,_updateCuratorShareBalance  does not reduce share balance but instead increase share balance,validation-278,invalid,Unsatisfactory,,,278,,U
+validation-28,PhiFactory contract has claim Function mishandling of Decompressed Data,validation-28,invalid,Unsatisfactory,,,28,,U
+validation-280,Incorrect Minter Status Update in PhiFactory Contract,validation-280,invalid,Unsatisfactory,,,280,,U
+validation-281,Malicious attacker can deny a curator from calling sellShareCred() succesfully,validation-619,grief dos,Satisfactory,,,281,619,S
+validation-284,PhiFactory.mintProtocolFee won't be adjustable after deployment,findings-13,incorrect calculation of bp,Satisfactory,,,284,1013,S
+validation-285,BondingCurve.getPrice() function reverts in several situations,validation-285,invalid,Unsatisfactory,,,285,,U
+validation-286,PhiFactory expects artFee to be in BPS but protocol uses it as a flat fee,findings-13,incorrect calculation of bp,Satisfactory,,,286,1013,S
+validation-287,"Minter status not correctly updated, allowing inconsistent state",validation-287,invalid,Unsatisfactory,,,287,,U
+validation-288,"_addCredIdPerAddress() function is public, but it should be internal",findings-51,visibility,Satisfactory,,,288,1051,S
+validation-289,Malicious users can exploit a re-entrancy opportunity in `_handletrade` to bypass `SHARE_LOCK_PERIOD` and carry out a flashloan attack to dilute existing shareholders and steal their rewards distribution,findings-25,reentracncy,Satisfactory,,,289,1025,S
+validation-29,"Poor implementation of the Openzeppelin `UUPSUpgradeable` library, which will cause storage collisions during the update.",validation-404,qa?,Satisfactory,,,29,404,S
+validation-290,"_removeCredIdPerAddress() is public, but it  should be internal",findings-51,visibility,Satisfactory,,,290,1051,S
+validation-291,Minter status can be set without minting any tokens,validation-291,invalid,Unsatisfactory,,,291,,U
+validation-292,`createCred` in `Cred.sol` doesnt check if `block.chainid` matches `credChainId` allowing malicious users to deploy creds on a different chain without permission,validation-292,"sender is checked, no impact",Unsatisfactory,,,292,,U
+validation-293,`PhiFactory` deployments won't work correctly on ZKsync chain,validation-3,"""and Other EVM chain"" in readme",Satisfactory,,,293,3,S
+validation-294,Rounding to zero can allow an attacker exploit the `curatorRewardsDistributor.sol`,validation-294,no impact,Unsatisfactory,,,294,,U
+validation-295,claim() and batchClaim() functions do not refund excess of value,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,295,1011,S
+validation-296,Incorrect Creator Fee Calculation Leads to Inconsistent Pricing,validation-296,known issue 6,Unsatisfactory,,,296,,U
+validation-297,Unintended Full Balance Withdrawal When Amount is Set to Zero,validation-297,intended behavior,Unsatisfactory,,,297,,U
+validation-298,PhiFactory.merkleClaim() can be called undefinedly with the same parameters,validation-298,intended behavior,Unsatisfactory,,,298,,U
+validation-299,"Sellers may not receive the expected amount when selling their shares, especially when the supply reaches 0.",validation-299,invalid,Unsatisfactory,,,299,,U
+validation-3,Create2 Opcode works differently in zkSync,validation-3,"""and Other EVM chain"" in readme",Satisfactory,,,3,3,S
+validation-30,"Token with id `0` was restricted in the `PhiNFT1155::claimFromFactory` function, which blocks the claiming of art token.",validation-30,intended behavior,Unsatisfactory,,,30,,U
+validation-300,Potential Division by Zero in _curve Function,validation-300,no impact,Unsatisfactory,,,300,,U
+validation-301,PhiFactory.signatureClaim() can be called multiple times with the same parameters,validation-301,intended behavior,Unsatisfactory,,,301,,U
+validation-302,The distribution of rewards to curators can be permanently blocked,validation-372,unbounded array lead to unbounded gas,Satisfactory,,,302,372,S
+validation-303,Incorrect `supportsInterface` implementation in `PhiNFT1155.sol` may lead to loss of royalty fees,validation-303,invalid,Unsatisfactory,,,303,,U
+validation-304,Invalid distribution in `PhiRewards.sol`,validation-304,no impact,Unsatisfactory,,,304,,U
+validation-305,Wrong function visibility enables attackers to block users from selling cred shares,findings-51,visibility,Satisfactory,,,305,1051,S
+validation-306,Incorrect Share Balance Update During Sell Operations,validation-306,invalid,Unsatisfactory,,,306,,U
+validation-307,PhiFactory wont be able to upgrade NFT,findings-10,owner cannot call function,Satisfactory,,,307,1010,S
+validation-308,Unchecked Parameters in Functions,validation-308,insufficient quality,Unsatisfactory,,,308,,U
+validation-309,Curator could sell shares even when their balance becomes zero,validation-309,insufficient quality,Unsatisfactory,,,309,,U
+validation-310,Conditions without Proper Validation,validation-310,insufficient quality,Unsatisfactory,,,310,,U
+validation-311,Unchecked Parameters in Batch Operations,validation-311,insufficient quality,Unsatisfactory,,,311,,U
+validation-312,Signature and Data Validation,validation-312,insufficient quality,Unsatisfactory,,,312,,U
+validation-313,User can potentially pay less than the required fees in a buy operation.,validation-313,"insufficient quality, repeatedly",Unsatisfactory,,,313,,U
+validation-314,Insufficient Validation of `msg.value` in `buyShareCred` Function,validation-314,"insufficient quality, repeatedly",Unsatisfactory,,,314,,U
+validation-315,Users can buy shares without sending sufficient payment to cover the total fees (protocol fee + creator fee).,validation-315,"insufficient quality, repeatedly",Unsatisfactory,,,315,,U
+validation-316,"If `PhiFactory` upgrades, the tokens already deployed will be unable to update the `phiFactoryContract` variable to the new implementation",findings-10,owner cannot call function,Satisfactory,,,316,1010,S
+validation-318,Wrongful calculation in handleTrade (getPriceData) due to using isBuy flag even when selling,validation-318,invalid,Unsatisfactory,,,318,,U
+validation-319,"`CuratorRewardsDistributor::distribute` Exceeds 30,000,000 Block Gas Limit When 110 or More Curators Hold Shares for the Same Credential",validation-372,unbounded array lead to unbounded gas,Satisfactory,,,319,372,S
+validation-320,abi.encode should be used instead of abi.encodePacked,validation-320,no impact,Unsatisfactory,,,320,,U
+validation-321,Premature `signature` expiration,validation-321,no impact,Unsatisfactory,,,321,,U
+validation-322,_updateRoyalties() has no upper bound check,findings-14,"no cap on royalty, some mentions the way artist can harm user, some not",Satisfactory,,,322,1014,S
+validation-323,User can front-run and block someone from selling and dropping the price down of the cred.,validation-323,no content,Unsatisfactory,,,323,,U
+validation-324,Cross chain signature replay attacks is possible even with expiresIn,validation-324,"sender is checked, no impact",Unsatisfactory,,,324,,U
+validation-325,Out-of-Bounds Error in getPositionsForCurator Function,validation-95,it will revert?,Satisfactory,,,325,95,S
+validation-326,`PhiFactory::createArt` Unintentionally Reverts When msg.value Exceeds NFT_ART_CREATE_FEE Due to Two Distinct Issues,findings-11,and it will revert,Satisfactory,,,326,1011,S
+validation-327,Checking signature expiresIn is still vulnerable in the timeframe,validation-327,insufficient quality,Unsatisfactory,,,327,,U
+validation-328,_handleTrade() can front run someone selling and blocking him by a gift,validation-619,grief dos,Satisfactory,,,328,619,S
+validation-329,_addCredIdPerAddress & _removeCredIdPerAddress have wrong access modifiers,findings-51,visibility,Satisfactory,,,329,1051,S
+validation-33,Potential Signature Replay Attack in `withdrawWithSig` Function,validation-602,"possibly, withdraw to cex on chain A, but cex don't support chain B",Satisfactory,,,33,602,S
+validation-330,_removeCredIdPerAddress allows anyone to remove credId from any address. _addCredIdPerAddress  and _removeCredIdPerAddress  should not be public and should be internal,findings-51,visibility,Satisfactory,,,330,1051,S
+validation-331,Zero Amount Transfers Full Balance to Recipient In `RewardControl::_withdraw` Function,validation-331,intended behavior,Unsatisfactory,,,331,,U
+validation-332,Division by Zero in `BondingCurve::_curve` Function Causes Dirupt Of Many Processes,validation-332,no impact,Unsatisfactory,,,332,,U
+validation-333,Lack of Validation for `curatorRewardsDistributor_` Address In `PhiRewards::updateCuratorRewardsDistributor` Function Could Lead to Invalid Address Assignment,validation-333,no impact,Unsatisfactory,,,333,,U
+validation-334,handleRewardsAndGetValueSent external allows other to set their own address and get rewards,validation-334,no impact,Unsatisfactory,,,334,,U
+validation-335,"Since there is no limitation that how many numbers of curator addresses can be distributed rewards, the TX of the CuratorRewardsDistributor#`distribute()` can be DOSed - due to reaching a gas limit in the `for-loop`",validation-372,unbounded array lead to unbounded gas,Satisfactory,,,335,372,S
+validation-338,updateArtSettings in PhiFactory.sol lacks of whenNotPaused modifier,validation-376,qa,Satisfactory,,,338,376,S
+validation-339,RewardControl#distribute() can be gamed in a way,validation-339,"intended behavior, mitigated by sell lock period",Unsatisfactory,,,339,,U
+validation-340,"Lack of validation to check whether or not `credIds_.length == priceLimits_.length`, which lead the TX of the Cred#`_validateAndCalculateBatch()` to being DOSed, which makes the Cred#`batchBuyShareCred()` or Cred#`batchSellShareCred()` being DOSed",validation-369,no impact,Unsatisfactory,,,340,369,U
+validation-341,"Malicious user able to lock victim's shares to prevent them from selling temporarily, potentially carrying out market manipulation while letting victim take on unnecessary risk",validation-619,grief dos,Satisfactory,,,341,619,S
+validation-342,creators can collect fees higher than what the buyer intended to pay.,validation-342,"insufficient quality, repeatedly",Unsatisfactory,,,342,,U
+validation-343,"No Storage gap for Upgradeable contracts, might lead to Storage Collisions.",validation-404,qa?,Satisfactory,,,343,404,S
+validation-344,The contract's view of user balances is inconsistent with the actual ETH balances.,validation-344,invalid,Unsatisfactory,,,344,,U
+validation-345,Total fees (protocol fee + creator fee) can exceed the sent value (`msg.value`) in a buy operation.,validation-345,"insufficient quality, repeatedly",Unsatisfactory,,,345,,U
+validation-346,Frontrunning by calling distribute can cause share holders(curators) to lose money when buying shares ,validation-346,"intended behavior, mitigated by sell lock period",Unsatisfactory,,,346,,U
+validation-347,CREATE opcode works differently in the zkSync chain,validation-3,"""and Other EVM chain"" in readme",Satisfactory,,,347,3,S
+validation-349,Report on Security Issue in the withdrawFor Function,validation-349,intended behavior,Unsatisfactory,,,349,,U
+validation-35,Reward control has unprotected Ether Withdrawal on withdraw function,validation-35,intended behavior,Unsatisfactory,,,35,,U
+validation-350,Underflow vulnerability in the createArtFromFactory() function will result in loss of protocol funds,validation-350,invalid,Unsatisfactory,,,350,,U
+validation-351,Upgradeable functionality for the PhiNFT1155s will not work because the owner of the Minimal Proxies is the PhiFactory contract,findings-10,owner cannot call function,Satisfactory,,,351,1010,S
+validation-352,The `_handleTrade` is reentrancy prone which will enable flashloan steal of rewards,findings-25,reentracncy,Satisfactory,,,352,1025,S
+validation-353,Front-Running Vulnerability in Cred Buying Mechanism: A High-Severity Threat to Fairness and Security,validation-353,invalid,Unsatisfactory,,,353,,U
+validation-354,Malicious user can manipulate other curators's positions,findings-51,visibility,Satisfactory,,,354,1051,S
+validation-355,Malicious user can alter the reporting of getPositionsForCurator,validation-355,invalid,Unsatisfactory,,,355,,U
+validation-357,Users will lose funds when they call claim() and send bigger msg.value than required,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,357,1011,S
+validation-358,User can bypass the  `SHARE_LOCK_PERIOD` due reentrancy  in the  `cred.sol` contract,findings-25,reentracncy,Satisfactory,,,358,1025,S
+validation-359,Incorrect refund recipient in function `PhiNFT1155:createArtFromFactory` ,findings-11,and it will revert,Satisfactory,,,359,1011,S
+validation-360,"Removed from whitelist bonding curve can be used, resulting in potentially loss of funds for users and protocol",validation-360,no impact,Unsatisfactory,,,360,,U
+validation-361,The `_addCredIdPerAddress` and `_removeCredIdPerAddress` functions are public enabling DoS path of a buy/sell flow,findings-51,visibility,Satisfactory,,,361,1051,S
+validation-362,Internal function declared as public allows malicious user to manipulate the mapping `_credIdsPerAddress` and lock a share from the victim,findings-51,visibility,Satisfactory,,,362,1051,S
+validation-363,Attacker can set credIdsPerAddressArrLength to 0 so user will be unable to sell all their funds,findings-51,visibility,Satisfactory,,,363,1051,S
+validation-364,Accrual of map keys in `shareBalance` will result in expensive curator rewards distribution in the long term,validation-372,unbounded array lead to unbounded gas,Satisfactory,,,364,372,S
+validation-365,Reentrancy in creating Creds allows an attacker to steal all Ether from the Cred contract,findings-25,reentracncy,Satisfactory,,,365,1025,S
+validation-366,Reward distribution is vulnerable to flash loan attacks,findings-25,reentracncy,Satisfactory,,,366,1025,S
+validation-367,`_addCredIdPerAddress` and `_removeCredIdPerAddress` functions of Cred are erroneously publicly accessible,findings-51,visibility,Satisfactory,,,367,1051,S
+validation-368,Missing payment validation during the `claim` allows an attacker to steal Ether from the PhiFactory contract,findings-11,and/or steal the excessive fund,Satisfactory,,,368,1011,S
+validation-369,Array length check missing in _validateAndCalculateBatch() function,validation-369,no impact,Unsatisfactory,,,369,369,U
+validation-370,The factory and NFT contracts fail to refund excess Ether,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,370,1011,S
+validation-371,`mintProtocolFee` and `artCreateFee` setters validate input incorrectly,findings-13,incorrect calculation of bp,Satisfactory,,,371,1013,S
+validation-372,`shareBalance` bloating eventually blocks curator rewards distribution,validation-372,unbounded array lead to unbounded gas,Satisfactory,,,372,372,S
+validation-373,"Artist should be trusted, however every arbitrary address can become an artist and perform malicious operations.",validation-131,"frontrun, it is permissionless but 'artist' should be verified",Satisfactory,,,373,131,S
+validation-374,Curator rewards distribution may fail due to significant number of shareholders,validation-372,unbounded array lead to unbounded gas,Satisfactory,,,374,372,S
+validation-375,Attacker can DoS  anyone trying to sell shares in `cred.sol` contract,validation-619,grief dos,Satisfactory,,,375,619,S
+validation-376,"createArt function has the whenNotPaused modifier, but updateArtSettings",validation-376,qa,Satisfactory,,,376,376,S
+validation-377,"ImageURI does not have any validations, and can be arbitrary, thus containing malicious or NSFW URIs, possibly XSS",validation-77,imageURI can be forged,Satisfactory,,,377,77,S
+validation-379,Inconsistent Token URI Handling in PhiFactory Smart Contract,validation-379,gpt,Unsatisfactory,,,379,,U
+validation-381,No Token Recovery Mechanism ,validation-381,insufficient quality,Unsatisfactory,,,381,,U
+validation-382,Lack of Function to Withdraw Stuck ETH ,validation-382,insufficient quality,Unsatisfactory,,,382,,U
+validation-383,Lack of Slippage Control on Sell Orders ,validation-383,insufficient quality,Unsatisfactory,,,383,,U
+validation-384,Potential Front-running Risk ,validation-384,insufficient quality,Unsatisfactory,,,384,,U
+validation-385,Inadequate Share Lock Period,validation-385,insufficient quality,Unsatisfactory,,,385,,U
+validation-386,Oracle Manipulation ,validation-386,invalid,Unsatisfactory,,,386,,U
+validation-387,CuratorRewardDistributor.distribute() can be frontrun to get rewards for a recent share,validation-387,"intended behavior, mitigated by sell lock period",Unsatisfactory,,,387,,U
+validation-388,Incorrect array indexing in `getPositionsForCurator` leads to gaps in returned arrays,validation-388,intended behavior,Unsatisfactory,,,388,,U
+validation-389,Division by Zero in Bonding Curve Calculation Due to Incorrect Supply Validation Order,validation-389,no impact,Unsatisfactory,,,389,,U
+validation-39,"Excess ether sent while claiming art rewards is not returned to the caller, instead goes to protocol fee address",findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,39,1011,S
+validation-390,"Insufficicent validation of credData by `_validateArtCreation` before calling `_initializePhiArt` could lead to confusion, conflict in ownership.",validation-390,insufficient quality,Unsatisfactory,,,390,,U
+validation-391,_removeCredIdPerAddress removes the wrong credId ,validation-391,invalid,Unsatisfactory,,,391,,U
+validation-392,Distributor's Rewards can be Stolen by Anyone by Directly calling the `distribute` function,findings-27,it is not dust,Satisfactory,,,392,1027,S
+validation-393,High Gas Consumption Leading to Out-of-Gas Errors,validation-393,insufficient quality,Unsatisfactory,,,393,,U
+validation-394,unvalidated external call,validation-394,insufficient quality,Unsatisfactory,,,394,,U
+validation-395,Economic risks and protocol losses due to fixed CURVE_FACTOR,validation-395,intended behavior,Unsatisfactory,,,395,,U
+validation-396,High computational cost and permanent DoS of credential on distribute,validation-372,unbounded array lead to unbounded gas,Satisfactory,,,396,372,S
+validation-397,Curator reward distribution is susceptible to whale attacks ,findings-26,distribute mev,Satisfactory,,,397,1026,S
+validation-398,Protocol fees are severely undermined ,findings-13,incorrect calculation of bp,Satisfactory,,,398,1013,S
+validation-399,Artist fees are severely undermined,findings-13,incorrect calculation of bp,Satisfactory,,,399,1013,S
+validation-4,No way  to update non-whitelisted bonding curves for existing creds,validation-4,no impact,Unsatisfactory,,,4,,U
+validation-40,Missing refund of excess ether in `claim()`,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,40,1011,S
+validation-400,Wrongful calculation  in _validateAndCalculateBatch due to using isBuy,validation-400,invalid,Unsatisfactory,,,400,,U
+validation-401,Users can mint NFTs at protocol's expense ,findings-11,and/or steal the excessive fund,Satisfactory,,,401,1011,S
+validation-402,withdrawFor can be used by malicious attackers to cause DOS by frontrunning,validation-402,intended behavior,Unsatisfactory,,,402,,U
+validation-403,"Length of `shareBalance[credId]` in `Cred.sol` can exceed `MAX_SUPPLY` and cause a permanent DoS to rewards distribution in `CuratorRewardsDistributor.sol`, resulting in rewards of that cred being stuck **forever** in the contract",validation-372,unbounded array lead to unbounded gas,Satisfactory,,,403,372,S
+validation-404,Absence of storage gaps in both `PhiFactory` and `Cred`,validation-404,qa?,Satisfactory,,,404,404,S
+validation-405,No `protocolFee` upper bound in `Cred` contract,validation-405,qa,Satisfactory,,,405,405,S
+validation-406,`createArt` Function of `PhiFactory` Causing Reverts with Excess ETH,findings-11,and it will revert,Satisfactory,,,406,1011,S
+validation-407,Missing artId Validation in claim Function,validation-407,no impact,Unsatisfactory,,,407,,U
+validation-408,User can  prevent the protocol fee from going to the `protocolFeeDestination` address via reeentrancy possibility in `Cred::_handleTrade()` function`,validation-408,invalid,Unsatisfactory,,,408,,U
+validation-41,PhiFactory::batchClaim() switches the caller context from original caller to PhiFactory,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,41,1011,S
+validation-410,`claim()` function calls functions with `external` visibility in `PhiFactory`,validation-410,invalid,Unsatisfactory,,,410,,U
+validation-411,Users can withdraw rewards on behalf of other users,validation-411,intended behavior,Unsatisfactory,,,411,,U
+validation-413,Incorrect Fee Check in PhiFactory Contract set methods will not allow fee updates,findings-13,incorrect calculation of bp,Satisfactory,,,413,1013,S
+validation-414,Potential Out-of-Bounds Error in `_removeCredIdPerAddress` Due to Missing Validation,validation-414,no impact,Unsatisfactory,,,414,,U
+validation-415,Distribute Function Fails Entirely if Any Recipient Reverts During Batch Distribution,validation-415,invalid,Unsatisfactory,,,415,,U
+validation-416,Both `mintProtocolFee` and `artCreateFee` are implemented incorrectly in `PhiFactory`,findings-13,incorrect calculation of bp,Satisfactory,,,416,1013,S
+validation-417,Unsigned Integer Subtraction Reverts in _processClaim Function Due to Underflow Risk,validation-417,insufficient quality,Unsatisfactory,,,417,,U
+validation-418,Artist can front-run NFT sales on secondary markets and inflate royalty BPS to 100% to steal all sale proceeds,findings-14,"no cap on royalty, some mentions the way artist can harm user, some not",Satisfactory,,,418,1014,S
+validation-419,Any malicious user can DoS share purchasing ,findings-51,visibility,Satisfactory,,,419,1051,S
+validation-42,"`createArt()` has the `whenNotPaused` modifier, but `updateArtSettings()` does not.",validation-376,qa,Satisfactory,,,42,376,S
+validation-420,Incorrect ETH Refund Mechanism in Art Creation Process Leading to User Fund Loss,findings-11,and it will revert,Satisfactory,,,420,1011,S
+validation-421,"Anyone can delete curators' creds, reverting any attempts to sell shares ",findings-51,visibility,Satisfactory,,,421,1051,S
+validation-422,Art creation excess ETH is sent to the factory instead of artist,findings-11,and it will revert,Satisfactory,,,422,1011,S
+validation-423,`createArt()` and `claim()` signatures can be replayed by a user which they were not meant for since there is no address input validation,validation-131,replay & lack of validation,Satisfactory,,,423,131,S
+validation-424,"Once a Cred's bonding curve is removed from the whitelist, a new one cannot be set and trades will be executed on outdated pricing logic",validation-424,no impact,Unsatisfactory,,,424,,U
+validation-425,Reentrancy in `Cred._handleTrade` allow user to skip `SHARE_LOCK_PERIOD`,findings-25,reentracncy,Satisfactory,,,425,1025,S
+validation-426,Malicious actor can frontrun call to distribute(credId) in CuratorRewardsDistributor.sol and claim other curators' rewards,validation-426,"intended behavior, mitigated by sell lock period",Unsatisfactory,,,426,,U
+validation-427,Large Input Array can DOS depositBatch function(RewardControl.sol::Line 54),validation-427,insufficient quality,Unsatisfactory,,,427,,U
+validation-428,Uncapped NFT Royalties Allow Setting Excessive Fees,findings-14,"no cap on royalty, some mentions the way artist can harm user, some not",Satisfactory,,,428,1014,S
+validation-429,`Claimable` does not refund to caller.,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,429,1011,S
+validation-43,Updating of phiSignerAddress in PhiFactory by owner will cause revert in creating and claiming art,validation-43,intended behavior,Unsatisfactory,,,43,,U
+validation-430,Access ETH doesn't transferred back to the Caller,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,430,1011,S
+validation-431,`Cred::_removeCredIdPerAddress` is public; `Cred` can be DoSed to prevent curators sellling their shares,findings-51,visibility,Satisfactory,,,431,1051,S
+validation-432,`Cred::_addCredIdPerAddress` is public; can be exploited for double shares reporting,findings-51,visibility,Satisfactory,,,432,1051,S
+validation-434,Bypass createArt signature verification to create duplicate art to steal receiver reward,validation-131,replay & lack of validation,Satisfactory,,,434,131,S
+validation-435,Integer Overflow and Underflow,validation-435,insufficient quality,Unsatisfactory,,,435,,U
+validation-436,Denial of Service (DoS) Attacks,validation-436,insuficcient quality,Unsatisfactory,,,436,,U
+validation-437,"Protocol's refund mechanism fails to refunds ETH to user, leading to wrongful ETH accumulation and a chance for malicious users to steal victim's ETH to pay for their own claim fees.",findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,437,1011,S
+validation-438,User could call withdrawWithSig when the block.timestamp is equal to signature.deadline ,validation-438,no impact,Unsatisfactory,,,438,,U
+validation-44,"`CuratorRewardsDistributor::distribute` can be DoS-ed, leading to loss of user funds",validation-372,unbounded array lead to unbounded gas,Satisfactory,,,44,372,S
+validation-440,"PhiNFT Transfers are meant to be pausable, but it is not possible",validation-440,qa,Satisfactory,,,440,440,S
+validation-441, Inability to Update Protocol Fee Destination in PhiNFT1155 Contracts will result in loss of fees and royalties,validation-549,qa,Satisfactory,,,441,549,S
+validation-442,Users can lose their funds when they call the `CuratorRewardsDistributor::deposit` with some ether,validation-442,invalid,Unsatisfactory,,,442,,U
+validation-443,Missing deadline parameter inside `Cred.sol`'s buy & sell functions,validation-443,"no ddl, qa",Satisfactory,,,443,443,S
+validation-445,Any excess amount of ether will cause a transaction to revert when createArtFromFactory in PhiNFT1155 is called,findings-11,and it will revert,Satisfactory,,,445,1011,S
+validation-446,"Title: The [`PhiFactory:createArt`] is vulnerable to replay attack, a malicious user can call this function multiple times under certain condition and create multiple arts with the same signature",validation-131,replay & lack of validation,Satisfactory,,,446,131,S
+validation-447,The `CuratorRewardsDistributor::distribute` lacks access control allowing anyone to claim royalty fee from the protocol,findings-27,it is not dust,Satisfactory,,,447,1027,S
+validation-448,Incorrect handling of artCreateFee using Basis Points leads to miscalculated transfers,findings-13,incorrect calculation of bp,Satisfactory,,,448,1013,S
+validation-449,"Mishandling of ETH in the `phiFactory:claim()`, allowing for ETH to get stucked in the contract and users not getting their refunds",findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,449,1011,S
+validation-45,Creator will be unable to create new creds when contract is not paused,validation-45,invalid,Unsatisfactory,,,45,,U
+validation-450,You can block sale/purchase through the condition if (block.timestamp <= lastTradeTimestamp[credId_][curator_] + SHARE_LOCK_PERIOD),validation-450,invalid,Unsatisfactory,,,450,,U
+validation-451,Under certain conditions getPriceData() may return 0 price and fee due to lack of validation at 0,validation-451,insufficient quality,Unsatisfactory,,,451,,U
+validation-452,The functions _addCredIdPerAddress() and _removeCredIdPerAddress() with type public may cause incorrect functioning of the system in the future,findings-51,visibility,Satisfactory,,,452,1051,S
+validation-453,Art creation may be subject to reorg attack and DOS,validation-453,insufficient quality,Unsatisfactory,,,453,,U
+validation-454,Possible theft of funds in the RewardControl.sol contract,validation-454,invalid,Unsatisfactory,,,454,,U
+validation-455,Typo in RewardControl.withdrawFor() function,validation-455,intended behavior,Unsatisfactory,,,455,,U
+validation-456,PhiNFT1155 created via PhiFactory cannot be updated,findings-10,owner cannot call function,Satisfactory,,,456,1010,S
+validation-457,Possible freezing of funds in the PhiNFT1155.sol contract,validation-19,qa,Satisfactory,,,457,19,S
+validation-458,Updating the `withdrawRoyalty` does not distribute the rewards based on the previous royalty first,validation-252,qa,Satisfactory,,,458,252,S
+validation-46,Lacks of checks in signature inside `createArt` allows other artists without permission to deploy art with their own `CreateConfig` parameters illegally,validation-131,replay & lack of validation,Satisfactory,,,46,131,S
+validation-460,Vulnerable share lock period validation can lead to weaponization of share gifting,validation-619,grief dos,Satisfactory,,,460,619,S
+validation-461,An attacker can prevent anyone to sell all creds,findings-51,visibility,Satisfactory,,,461,1051,S
+validation-462,"In the `Cred`, functions `_addCredIdPerAddress` and `_removeCredIdPerAddress` have public visibility with no access control. Malicious user can use this to stop others from selling cred shares",findings-51,visibility,Satisfactory,,,462,1051,S
+validation-463,"Attacker can reenter `Cred::_handleTrade` to bypass `SHARE_LOCK_PERIOD` allowing them to buy a large amount of cred shares, claim the available rewards and then sell all in one tx",findings-25,reentracncy,Satisfactory,,,463,1025,S
+validation-464,"When creating a new cred the caller is limited to purchasing only one share, meaning popular creds risk being sniped",validation-464,intended behavior,Unsatisfactory,,,464,,U
+validation-465,The `onlyOwner` functions of `PhiNFT1155` deployed via `PhiFactory` will have uncallable functions because `PhiFactory` is set as the contracts owner,findings-10,owner cannot call function,Satisfactory,,,465,1010,S
+validation-466,Incomplete ERC165 Implementation Despite Intended Support in CreatorRoyaltiesControl Contract,validation-223,ERC165,Satisfactory,,,466,223,S
+validation-467,Users may lose and lock funds forever inside `PhiNFT1155.sol`,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,467,1011,S
+validation-468,"There are no checks on the URI passed by users when claiming art in `PhiFactory`, allowing them to direct their minted art output to any link",validation-77,imageURI can be forged,Satisfactory,,,468,77,S
+validation-469,It is possible for anyone to replay a valid signature from `PhiFactory::createArt` to create art for a given `credId`,validation-131,replay & lack of validation,Satisfactory,,,469,131,S
+validation-47,Creator will be unable to set maximum royalty for their creds,validation-47,invalid,Unsatisfactory,,,47,,U
+validation-470,Signatures passed to `PhiFactory::signatureClaim` can be repeated across the various `PhiFactory` instances on different EVM chains to claim art they should not be eligible to claim,validation-470,chainid is included in sig but not verified,Satisfactory,,,470,470,S
+validation-471,Centralization risk by giving a single user the privilege of pause/unpause certain operations.,validation-471,insufficient quality,Unsatisfactory,,,471,,U
+validation-472,CuratorRewardsDistributor: Anyone can call distribute and claim the royalty fee,findings-27,it is not dust,Satisfactory,,,472,1027,S
+validation-473,Lack of Access Control for `CuratorRewardsDistributor::distribute function`,findings-27,it is not dust,Satisfactory,,,473,1027,S
+validation-474,possible re-entrancy in the [PhiFactory:signatureClaim()] allowing a malicious user to steal funds from the protocol,validation-474,insufficient quality,Unsatisfactory,,,474,,U
+validation-475,Public Functions `Cred.sol::_addCredIdPerAddress` and 'Cred.sol_removeCredIdPerAddress` Should be Internal,findings-51,visibility,Satisfactory,,,475,1051,S
+validation-476,"`RewardControl.sol::withdrawFor` Function Withdraws Tokens to the Same Account, Causing Unexpected Behavior",validation-476,intended behavior,Unsatisfactory,,,476,,U
+validation-477,"Distribute function can run Out of Gas and result in DoS, permanently locking up rewards",validation-372,unbounded array lead to unbounded gas,Satisfactory,,,477,372,S
+validation-479,Missing royaltyBPS limit check in CreatorRoyaltiesControl,findings-14,"no cap on royalty, some mentions the way artist can harm user, some not",Satisfactory,,,479,1014,S
+validation-48,Inconsistent `credId` emitted in `CredCreated` event,validation-48,invalid,Unsatisfactory,,,48,,U
+validation-480,`_executeBatchTrade` function doesn't check if the batch operation would exceed the `MAX_SUPPLY`,validation-480,invalid,Unsatisfactory,,,480,,U
+validation-481, The function [CuratorRewardsDistributor:distribute] doesn't include an access control modifier thereby allowing anyone to be able to call this function stealing funds because of the precision loss during calculations.,findings-27,it is not dust,Satisfactory,,,481,1027,S
+validation-482,the `batchSellShareCred` function does not check for the share lock period before executing the batch sell operation,validation-482,invalid,Unsatisfactory,,,482,,U
+validation-483,Missed check if the referral_ address is the same as the minter_ ,validation-483,intended behavior,Unsatisfactory,,,483,,U
+validation-484,The system design could lead to incorrect supply calculations and pricing,validation-484,intended behavior,Unsatisfactory,,,484,,U
+validation-486,users can avoid pay fee when call claim in phifactory,findings-11,and/or steal the excessive fund,Satisfactory,,,486,1011,S
+validation-487,"An attacker can gas grief curators, when they batch trade",validation-619,grief dos,Satisfactory,,,487,619,S
+validation-488,Artist can change url of art without signature.,validation-488,intended behavior,Unsatisfactory,,,488,,U
+validation-489,The royaltyBPS check has failed,validation-489,insufficient quality,Unsatisfactory,,,489,,U
+validation-49,RewardControl contract has Unprotected Ether Withdrawal in withdrawFor function,validation-49,intended behavior,Unsatisfactory,,,49,,U
+validation-490,"While creating an art, if additional ETH is sent by the artist to `PhiFactory`, the transaction will always revert",findings-11,and it will revert,Satisfactory,,,490,1011,S
+validation-491,"Deploying a proxy contracts at the same deterministic address before an artist, may result in Denial of Service.",validation-491,invalid,Unsatisfactory,,,491,,U
+validation-492,Front-running the claim function and updating the mintFee can result in financial loss for the minter at the time of their claim.,findings-14,mintfee updated by artist,Satisfactory,,,492,1014,S
+validation-493,The creator or share buyer could bypass the `SHARE_LOCK_PERIOD` and sell the share immediately after purchasing it.,findings-25,reentracncy,Satisfactory,,,493,1025,S
+validation-494,"Creator sets the wrong address as creator in createCred & thus updateCred() could fail due to incorrect authorization, causing a denial of service.",validation-494,QA,Satisfactory,,,494,494,S
+validation-495,"The createArt() function is vulnerable to cross-chain or same-chain replay attacks, potentially allowing unauthorized duplicative transactions.",validation-131,replay & lack of validation,Satisfactory,,,495,131,S
+validation-496,"The functions _addCredIdPerAddress() and _removeCredIdPerAddress() have public visibility, allowing malicious users to manipulate the share amounts of any curator.",findings-51,visibility,Satisfactory,,,496,1051,S
+validation-497,createCred() & updateCred() are vulnerable to cross chain signature replay attack,validation-497,"sender is checked, no impact",Unsatisfactory,,,497,,U
+validation-5,buyShareCredFor Function Vulnerable to Griefing and Front-Running Attacks,validation-619,grief dos,Satisfactory,,,5,619,S
+validation-50,RewardControl contract has Multiple Calls in a Single Transaction in withdrawWithSig function,validation-50,invalid,Unsatisfactory,,,50,,U
+validation-500,Attacker can manipulate cred rewards distribution,findings-25,reentracncy,Satisfactory,,,500,1025,S
+validation-501,`batchClaim` Function Reverts Entire Operation on Single Claim Failure,validation-501,no impact,Unsatisfactory,,,501,,U
+validation-502,Improper/Invalid validation of credId_ existence in BondingCurve.sol,validation-502,no impact,Unsatisfactory,,,502,,U
+validation-503,`Cred::_handleTrade` is Vulnerable to Re-entrancy and Skips `SHARE_LOCK_PERIOD` Check,findings-25,reentracncy,Satisfactory,,,503,1025,S
+validation-504,Any User Can Mint Up to Max Supply of NFT,validation-504,intended behavior,Unsatisfactory,,,504,,U
+validation-505,Anyone can set themselves as the 'royaltyRecipient' and allow them to manipulate and diverting funds away from the recipient,validation-505,insufficient quality,Unsatisfactory,,,505,,U
+validation-506,Unsafe ETH transfer sequence increases risk of reentrancy and impact of potential issues during refund process.,validation-506,no description of valid attack path,Unsatisfactory,,,506,,U
+validation-507,`Cred.sol::createCred` permits cross-chain signature replay,validation-507,"sender is checked, no impact",Unsatisfactory,,,507,,U
+validation-508,_updateCuratorShareBalance and _addCredIdPerAddress should be internal (Cred.sol),findings-51,visibility,Satisfactory,,,508,1051,S
+validation-509,The '_initializePhiArt' function is not protected causing unauthorized access to the contract,validation-509,insufficient quality,Unsatisfactory,,,509,,U
+validation-51,Unauthorized Removal of Credential ID Allows Attacker to Disrupt User CRED Share Management,findings-51,visibility,Satisfactory,,,51,1051,S
+validation-510, Public _removeCredIdPerAddress function allows attackers to block legitimate share sales,findings-51,visibility,Satisfactory,,,510,1051,S
+validation-511,Public visibility of _removeCredIdPerAddress allows unauthorized calls,findings-51,visibility,Satisfactory,,,511,1051,S
+validation-515,Art validation during creation is incomplete or inconsistent,validation-515,insufficient quality,Unsatisfactory,,,515,,U
+validation-516,Duplicate `credId` in `createCred` Function,validation-516,no description of valid attack path,Unsatisfactory,,,516,,U
+validation-517,Potential Reentrancy Vulnerability in `_handleTrade` Function due to Missing `nonReentrant` Modifier,validation-517,no impact,Unsatisfactory,,,517,,U
+validation-518,BatchTrade processing can be blocked,validation-518,no impact,Unsatisfactory,,,518,,U
+validation-519,Rejection of Valid Signatures Due to Strict Expiration ,validation-519,invalid,Unsatisfactory,,,519,,U
+validation-52,Contract Self-Ownership Vulnerability,validation-52,"intended behavior, no mention of crosschain",Unsatisfactory,,,52,,U
+validation-520,Signature can be replayed in `PhiFactory::claim`,validation-520,no impact,Unsatisfactory,,,520,,U
+validation-521,getPrice : Division by zero,validation-131,replay & lack of validation,Satisfactory,,,521,131,S
+validation-522,Unrestricted Use of Signed Data in Art Creation Process,validation-522,no impact,Unsatisfactory,,,522,,U
+validation-523,Performance Degradation and Inefficient Duplicate Check in Batch Validation Process,validation-405,qa,Satisfactory,,,523,405,S
+validation-524,Invalid `protocolFeePercent` values ​​can be used to grief `Cred` users or a DoS of the protocol.,validation-369,no impact,Unsatisfactory,,,524,369,U
+validation-525,Potential DOS Vulnerability and Excessive Gas Consumption Due to Unrestricted Array Length in `_validateAndCalculateBatch` Function,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,525,1011,S
+validation-526,Potential Loss of User Funds Due to Lack of Overpayment Refund in Individual Claim Functions,findings-51,visibility,Satisfactory,,,526,1051,S
+validation-527,Unrestricted Cred ID Manipulation Vulnerability,findings-51,visibility,Satisfactory,,,527,1051,S
+validation-528,Unauthorized Access in the `_addCredIdPerAddress` and `_removeCredIdPerAddress` functions,findings-14,"inherent centralization risk, qa or m",Satisfactory,,,528,1014,S
+validation-53,Mutable soulBounded property in PhiFactory allows unexpected changes to token transferability,findings-11,and it will revert,Satisfactory,,,53,1011,S
+validation-530,Excess ETH is not refunded when calling `PhiFactory::createArt`,validation-530,intended behavior,Unsatisfactory,,,530,,U
+validation-531,Edge Case Risk,findings-13,incorrect calculation of bp,Satisfactory,,,531,1013,S
+validation-532,Incorrect handling of mintProtocolFee using basis points leads to miscalculated transfers,validation-619,grief dos,Satisfactory,,,532,619,S
+validation-533,Malicious user can intentionally target another user and prevent them from withdrawing,findings-51,visibility,Satisfactory,,,533,1051,S
+validation-536,Lack of access control to `_addCredIdPerAddress` and `_removeCredIdPerAddress` may prevent users from selling their shares,findings-51,visibility,Satisfactory,,,536,1051,S
+validation-537,Anyone can add a credId to any curator's mapping and anyone can remove it ,validation-372,unbounded array lead to unbounded gas,Satisfactory,,,537,372,S
+validation-538,Funds may be irrecoverable from CuratorRewardsDistributor contract due to high gas cost of distribute function,findings-25,reentracncy,Satisfactory,,,538,1025,S
+validation-539,Reentrancy vulnerability in Cred::buyShareCred,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,539,1011,S
+validation-54,"Users don't get refunds when claiming, which allows other users to claim at a discount",validation-54,no impact,Unsatisfactory,,,54,,U
+validation-540,Potential overflow risk in `RewardControl::deposit()`,validation-540,insufficient quality,Unsatisfactory,,,540,,U
+validation-541,Lack of domain separation for signatures used in PhiFactory,validation-369,no impact,Unsatisfactory,,,541,369,U
+validation-543,Missing `priceLimits_` length check in `Cred::_validateAndCalculateBatch` function causing an array out-of-bounds access in the `Cred::batchBuyShareCred` and `Cred::batchSellShareCred` functions,findings-11,and it will revert,Satisfactory,,,543,1011,S
+validation-546,Incorrect refund logic in `createArtFromFactory`,validation-546,intended behavior,Unsatisfactory,,,546,,U
+validation-547,Updating phiSignerAddress invalidates all pending signatures causing art creation failures,validation-404,qa?,Satisfactory,,,547,404,S
+validation-548,Lack of Storage Gap in Upgradeable Contracts May Lead to Storage Slot Collision,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,548,1011,S
+validation-549,`PhiFactory:claim` Potentially Causing Loss of Funds If `mintFee` Changed Beforehand,validation-549,qa,Satisfactory,,,549,549,S
+validation-55,PhiNFT1155 contracts continue sending fees/royalties to old protocol destination address,validation-55,invalid,Unsatisfactory,,,55,,U
+validation-550,A missing validation check in the claim function will cause a loss of revenue for the protocol as an attacker will be able to claim art without paying the required mint fee.,validation-550,intended behavior,Unsatisfactory,,,550,,U
+validation-551,Incorrect validation for artist in PhiNFT1155.updateRoyalties() allows unintended royalty disabling,validation-131,replay & lack of validation,Satisfactory,,,551,131,S
+validation-552,"Overriding `createConfig` Parameters Due to Lack of Validation Against Signature, Causing Potential Misuse of Art Creation Configurations",findings-27,it is not dust,Satisfactory,,,552,1027,S
+validation-553,An attacker can steal royalty fee by calling the distribute function,findings-51,visibility,Satisfactory,,,553,1051,S
+validation-554,anyone can update _credIdsPerAddress by calling _addCredIdPerAddress or _removeCredIdPerAddress,validation-554,intended behavior?,Satisfactory,,,554,554,S
+validation-556,Creating art with creds from another chain allows to deprive curators of their rewards,findings-11,and it will revert,Satisfactory,,,556,1011,S
+validation-557,Wrong msg.sender,validation-19,qa,Satisfactory,,,557,19,S
+validation-558,Stuck ETH in the PhiNFT1155 contract,validation-558,invalid,Unsatisfactory,,,558,,U
+validation-559,Lack of Protection Against Partial Execution in `RewardControl::depositBatch` Function,validation-559,insuficcient quality,Unsatisfactory,,,559,,U
+validation-560,Potential Denial of Service Vulnerability in claim and batchClaim Functions Due to Contract Pause State,validation-560,insuficcient quality,Unsatisfactory,,,560,,U
+validation-561,Falsification of Cred Data by Bypassing Verification Process while updating cred information,findings-14,"no cap on royalty, some mentions the way artist can harm user, some not",Satisfactory,,,561,1014,S
+validation-563,CreatorRoyaltiesControl: _updateRoyalties does not validate the max royalties fee,validation-563,no impact,Unsatisfactory,,,563,,U
+validation-564,Missing receive function,validation-564,insuficcient quality,Unsatisfactory,,,564,,U
+validation-565,Reusing the Same Art in Multiple Credentials,validation-565,insuficcient quality,Unsatisfactory,,,565,,U
+validation-566,Copying Another Artist’s Work in a Credential with Minimal Fee to Undermine Original Artists,validation-566,insuficcient quality,Unsatisfactory,,,566,,U
+validation-568,Risk of Infinite Art Creation Leading to Spam and Harm to Genuine Artists,validation-568,sender is checked,Unsatisfactory,,,568,,U
+validation-57,Signature reply when creating and updating Creds,validation-131,"frontrun, it is permissionless but 'artist' should be verified",Satisfactory,,,57,131,S
+validation-57,Create art can be frontruned and lead to lose of funds for artist,validation-57,no impact,Unsatisfactory,,,57,,U
+validation-570,"`_addCredIdPerAddress` and `_removeCredIdPerAddress` are public, allowing anyone to add or remove cred ids for an address",findings-51,visibility,Satisfactory,,,570,1051,S
+validation-572,Missing authentication check can lead to potential DoS or data corruption,findings-51,visibility,Satisfactory,,,572,1051,S
+validation-573,No Validation of `priceLimit` in `_validateAndCalculateBatch` Function,validation-573,no impact,Unsatisfactory,,,573,,U
+validation-574, Absence of Mint Fee Limit in `updateArtSettings` Function,findings-14,msg.value itself can serve for slippage control purpose,Satisfactory,,,574,1014,S
+validation-575,Inconsistent Function Signatures in `Claimable` Contract Leading to Execution Failures,validation-575,no impact,Unsatisfactory,,,575,,U
+validation-576,A malicious user can perform cross-chain replay attacks on signature claims,validation-470,chainid is included in sig but not verified,Satisfactory,,,576,470,S
+validation-577,PhiFactory: smart contract wallets can not claim rewards,validation-577,smart contract wallet,Satisfactory,,,577,577,S
+validation-578,Lack of Validation on `royaltyBPS` in `_updateRoyalties` Function,findings-14,"no cap on royalty, some mentions the way artist can harm user, some not",Satisfactory,,,578,1014,S
+validation-579,Incorrect msg.value handling in claim function prevents ETH refunds,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,579,1011,S
+validation-58,"`art.numberMinted` is incremented unconditionally, regardless of whether the token has already been minted by the minter_ before. ",validation-58,invalid,Unsatisfactory,,,58,,U
+validation-580,minterData and advancedTokenURI for a user can be overwritten,validation-77,imageURI can be forged,Satisfactory,,,580,77,S
+validation-581,Improper Signature Binding Enables Cross-Context Replay Attacks,validation-581,gpt,Unsatisfactory,,,581,,U
+validation-584,Centralization Risk in Signature Verification,validation-584,inflated severity,Unsatisfactory,,,584,,U
+validation-585,Potential Front-Running in Art Creation,validation-131,"frontrun, it is permissionless but 'artist' should be verified",Satisfactory,,,585,131,S
+validation-588,"A multisig Cred Creator could lose verifier rewards when art is claimed on another chain, and possibly get them stolen due to force withdraws.",validation-588,no impact,Unsatisfactory,,,588,,U
+validation-59,Cred creator could stuck funds,validation-59,"inherent risk, but its capped, qa",Satisfactory,,,59,59,S
+validation-590,Forced endTime extension in updateArtSettings() allows attacker to mint more tokens,validation-590,artist cannot update setting without extending the sale,Satisfactory,,,590,590,S
+validation-591,Missing verification type check in signatureClaim function,validation-591,intended behavior,Unsatisfactory,,,591,,U
+validation-593,Lack of validation of `ref_` in `PhiFactory::merkleClaim` means user can effectively claim art without paying the referral fee,validation-593,"ref is used by frontends, intended behavior",Unsatisfactory,,,593,,U
+validation-594,Issue in `getTotalMintFee` Function Due to Missing Array Length Validation,validation-594,no impact,Unsatisfactory,,,594,,U
+validation-595,Front-Running Vulnerability in NFT Royalty Updates Allows Profit Exploitation and Creator Losses,validation-595,intended behavior,Unsatisfactory,,,595,,U
+validation-596,Missing Validation in `createArtFromFactory` Function of `PhiNFT1155` Contract,validation-596,invalid,Unsatisfactory,,,596,,U
+validation-597,Unauthorized Withdrawal in RewardControl Contract Enables Balance Manipulation and Fund Theft,validation-597,intended behavior,Unsatisfactory,,,597,,U
+validation-598,Potential DoS due to high gas cost of reward distribution over 999 curators,validation-372,unbounded array lead to unbounded gas,Satisfactory,,,598,372,S
+validation-599,Public Access to Internal Cred Mappings Enables Unauthorized Manipulation of User Portfolios,findings-51,visibility,Satisfactory,,,599,1051,S
+validation-60,Events can be emitted with wrong data,validation-60,no impact,Unsatisfactory,,,60,,U
+validation-600,"Centralized Pause Function Enables Owner to Freeze NFT Operations, Potentially Causing User Losses",validation-600,centralization risk,Unsatisfactory,,,600,,U
+validation-601,Ponteial Race Condition in `createArtFromFactory` Function,validation-601,invalid,Unsatisfactory,,,601,,U
+validation-602,withdrawals can be replayed in different chain ! ,validation-602,"possibly, withdraw to cex on chain A, but cex don't support chain B",Satisfactory,,,602,602,S
+validation-603,Timestamp Manipulation Vulnerability in Signature Expiration Check Leading to Potential DoS Attacks,validation-603,no impact,Unsatisfactory,,,603,,U
+validation-604,Signature Replay Vulnerability in RewardControl Contract Allows Potential Balance Draining,validation-604,invalid,Unsatisfactory,,,604,,U
+validation-605,Block Timestamp Manipulation in PhiFactory Contract Affects NFT Minting Timing,validation-605,insufficient quality,Unsatisfactory,,,605,,U
+validation-606,"Denial of Service in RewardControl.sol contract, leads to locking of withdrawal and deposit functionality.",validation-606,insufficient quality,Unsatisfactory,,,606,,U
+validation-607,Array Length Manipulation in Cred Contract Enables Data Corruption and Denial of Service,validation-607,insufficient quality,Unsatisfactory,,,607,,U
+validation-608,Timing Exploitation in Reward Distribution Mechanism Allows Strategic Manipulation for Unfair Gains,validation-608,gpt,Unsatisfactory,,,608,,U
+validation-609,Unaccounted ETH Deposits Lead to Balance Inconsistency and Potential ETH  Lock-up,validation-609,invalid,Unsatisfactory,,,609,,U
+validation-61,"When the `claim` function is called with the `MERKLE` verification type, it may not properly update the minted tokens count and may not revert as expected.",findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,61,1011,S
+validation-610,Signature Replay Vulnerability in NFT Claim Function Allows Unlimited Minting,validation-610,"intended behavior, no mention of crosschain",Unsatisfactory,,,610,,U
+validation-611,Uncapped Minting Fee Increases Risk User Fund Loss and Claim Abandonment,findings-14,msg.value itself can serve for slippage control purpose,Satisfactory,,,611,1014,S
+validation-612,Unprotected Zero-Value Transactions in phiRewards Contract Enable Denial of Service (DoS) and Other Attacks,validation-612,insuficcient quality,Unsatisfactory,,,612,,U
+validation-613,Unrestricted endTime Updates in PhiFactory Allow Premature Invalidation of Valid Minting Claims,validation-613,invalid,Unsatisfactory,,,613,,U
+validation-615,"Insufficient Validation in updateArtSettings Allows Setting Invalid maxSupply, Potentially Bricking Minting",validation-615,gpt,Unsatisfactory,,,615,,U
+validation-616,Immediate Credential Creation and Share Purchase Vulnerability Enables Flash Loan Exploits for Governance Manipulation,findings-51,visibility,Satisfactory,,,616,1051,S
+validation-617,Unauthorized Removal of Cred ID Allows Malicious Users to Prevent Victims from Selling Their Share,validation-404,qa?,Satisfactory,,,617,404,S
+validation-618,Corruptible Upgradability Pattern,validation-618,insuficcient quality,Unsatisfactory,,,618,,U
+validation-619,Incorrect Sell Price Calculation in BondingCurve Contract Leads to Overpayment and Economic Imbalance,validation-619,grief dos,Satisfactory,,,619,619,S
+validation-621,Attacker can DOS user from selling shares of a credId,findings-14,"inherent centralization risk, qa or m",Satisfactory,,,621,1014,S
+validation-622,"Unrestricted usage of `soulBounded` parameter breaks `PhiNFT1155` compliance with ERC-1155, and allows to create honey pots",validation-622,intended behavior,Unsatisfactory,,,622,,U
+validation-623,Exploitation of Bonding Curve - Underpricing Due to Low Initial Supply.,validation-623,gpt,Unsatisfactory,,,623,,U
+validation-625,Unchecked ERC20 Return Values in Phi Protocol Contracts Risk Unauthorized State Changes and Financial Discrepancies,validation-625,intended behavior,Unsatisfactory,,,625,,U
+validation-626,VerificationType is not enforced for claiming NFT directly with signatureClaim(),validation-626,known issue 5,Unsatisfactory,,,626,,U
+validation-627,"When calculating the price, the cred can return an incorrect price after a fee. ",validation-627,insufficient quality,Unsatisfactory,,,627,,U
+validation-628,changes balance of all intended actors in RewardControl contract but the actual money not deposited to Rewardcontrol contract ,validation-628,no impact,Unsatisfactory,,,628,,U
+validation-629,Zero Address Issue in `claimFromFactory`,validation-629,gpt,Unsatisfactory,,,629,,U
+validation-63,Insufficient Ownership Verification in signatureClaim Allows Unauthorized NFT Manipulation,validation-63,intended behavior,Unsatisfactory,,,63,,U
+validation-630,Updating of phiSignerAddress in Cred by owner will cause revert in creating and updating Creds,validation-630,no impact,Unsatisfactory,,,630,,U
+validation-631,Missing validation in `safeBatchTransferFrom` Function,validation-631,no impact,Unsatisfactory,,,631,,U
+validation-632,"excessive gas uses unnecessarily, lead to revert in trasaction due to high gas cost with large numRecipients",findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,632,1011,S
+validation-633,Using the `this` keyword to pass `mintFee` ETh value in the `claim(...)` function causes loss of excess ETH ,validation-633,ERC20 used by the protocol: None,Unsatisfactory,,,633,,U
+validation-634,Potential Issue with Fee-on-Transfer and Blacklisted Tokens in `deposit` Function,validation-634,gpt,Unsatisfactory,,,634,,U
+validation-635,"Unsanitized Input in mint() Allows JSON Injection, Compromising NFT Metadata Integrity",validation-405,qa,Satisfactory,,,635,405,S
+validation-636,No limit on `protocolFeePercent` in Cred Contract ,validation-636,intended behavior,Unsatisfactory,,,636,,U
+validation-637,Unauthorized Withdrawal of User Balances through `WithdrawFor` Function,findings-26,distribute mev,Satisfactory,,,637,1026,S
+validation-638,Attackers will steal tokens via frequent distributions,validation-638,no impact,Unsatisfactory,,,638,,U
+validation-639,Division by Zero Vulnerability in the `_curve` Function of the `BondingCurve` Contract,validation-639,"invalid, ppl will still buy in hope of price rises",Unsatisfactory,,,639,,U
+validation-64,"Buying price is  greater than selling price, no one buys a depreciating asset and leads to dead protocol",findings-11,and it will revert,Satisfactory,,,64,1011,S
+validation-640,"When msg.value to be set greater than artFee and call createArt function, it always reverts.",validation-3,"""and Other EVM chain"" in readme",Satisfactory,,,640,3,S
+validation-641,Arts cannot be created if protocol is deployed on zkEVMs or zkSync,validation-376,qa,Satisfactory,,,641,376,S
+validation-642,`updateArtSettings` in `PhiFactory.sol` can still be called even if contract is paused,validation-642,intended behavior,Unsatisfactory,,,642,,U
+validation-643,`withdrawFor` can be used to lock some users asset,validation-131,replay & lack of validation,Satisfactory,,,643,131,S
+validation-644,Signature Replay Vulnerability in Art Creation,validation-644,"invalid, verificationType has been checked",Unsatisfactory,,,644,,U
+validation-645,Potential JSON Injection Vulnerability in Metadata Construction,validation-645,invalid,Unsatisfactory,,,645,,U
+validation-646,Lack of Access Control in RewardControl,findings-25,reentracncy,Satisfactory,,,646,1025,S
+validation-647,Malicious user could bypass share lock period and receive maximum curator rewards without ever being a share holder,validation-647,gpt,Unsatisfactory,,,647,,U
+validation-648,Incomplete Reward Claims Due to Insufficient Balance and Misleading Event Emissions,validation-648,no impact,Unsatisfactory,,,648,,U
+validation-649,Strict Check used with `msg.value`,validation-440,qa,Satisfactory,,,649,440,S
+validation-65,PhiNFT1155 are transferrable even after being paused,validation-131,replay & lack of validation,Satisfactory,,,65,131,S
+validation-650,`signature` can be used by anyone,validation-650,invalid,Unsatisfactory,,,650,,U
+validation-651,Share Lock Period Bypass in Batch Operations,validation-651,no impact,Unsatisfactory,,,651,,U
+validation-652,Insufficient Slippage Protection in Share Trading,findings-51,visibility,Satisfactory,,,652,1051,S
+validation-654,Function _removeCredIdPerAddress() is public leading to DOS attacks when users sell shares,validation-654,known issue 6,Unsatisfactory,,,654,,U
+validation-657,Signature Malleability in the `_verifySignature` Function,validation-657,gpt,Unsatisfactory,,,657,,U
+validation-658,Reentrancy Vulnerability in Reward Distribution and NFT Management Allows Recursive Exploits and Unauthorized Transactions,validation-658,invalid,Unsatisfactory,,,658,,U
+validation-659, Sandwich Attacks in BondingCurve's Price Calculation Functions,validation-659,invalid,Unsatisfactory,,,659,,U
+validation-66,`buyShareCredFor` passes the wrong curator to `_handleTrade`,findings-51,visibility,Satisfactory,,,66,1051,S
+validation-660,Lack of access control in `Cred:_removeCredIdPerAddress` stops user from selling entire share balance.,validation-19,qa,Satisfactory,,,660,19,S
+validation-661,Locked Funds Due to Missing Withdraw Function,validation-661,insufficient quality,Unsatisfactory,,,661,,U
+validation-662,Possible underflow could miscalculate fees and revert ,validation-662,gpt,Unsatisfactory,,,662,,U
+validation-664,Insufficient Validation in createArt Allows Manipulation of NFT Creation and Unauthorized Credential Issuance,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,664,1011,S
+validation-665,Refunds are not correctly handled and would be locked in PhiNFT1155.sol contract instances and PhiFactory,validation-369,no impact,Unsatisfactory,,,665,369,U
+validation-666,Potential Array Length Mismatch in Batch Operations,validation-666,gpt,Unsatisfactory,,,666,,U
+validation-667,Unsafe Token Transfer Due to Lack of Address Validation in Smart Contracts,findings-13,incorrect calculation of bp,Satisfactory,,,667,1013,S
+validation-668,mintProtocolFee and artCreateFee cannot be more than 10000 wei,validation-668,invalid,Unsatisfactory,,,668,,U
+validation-67,`curatorData` indexing within `getCuratorAddresses` is flawed,validation-67,intended behavior,Unsatisfactory,,,67,,U
+validation-68,Lack of checks in `Cred:buyShareCredFor` allows malicious user to buy on behalf of the cred contract,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,68,1011,S
+validation-69,"'claim' function of the PhiFactory contract, if msg.value is greater than mintFee, the remaining ether after subtracting mintFee will not be returned.",validation-69,"intended behavior, mitigated by sell lock period",Unsatisfactory,,,69,,U
+validation-7,Distribute is not fair for long share holders,validation-7,no impact,Unsatisfactory,,,7,,U
+validation-70,Caller will receive excess rewards intended for curators,findings-27,it is not dust,Satisfactory,,,70,1027,S
+validation-71,"If `totalNum` (the total number of shares) is zero, the function reverts with the `NoSharesToDistribute` error, Curator will receive incorrect rewards due to unchanged balance after distribution",validation-71,invalid,Unsatisfactory,,,71,,U
+validation-72,Malicious artist could lock nfts,findings-14,"inherent centralization risk, qa or m",Satisfactory,,,72,1014,S
+validation-73,Art creators can update royalties to 100% and front-run NFT sales to pocket the whole sale amount.,findings-14,"no cap on royalty, some mentions the way artist can harm user, some not",Satisfactory,,,73,1014,S
+validation-74,"Curator Rewards Distributor will not fully distribute rewards to curators. Some funds may remain stuck in the contract and not be fully distributed to the curators. Over time, these small amounts can accumulate, leading to discrepancies in the expected distribution of rewards.",validation-74,invalid,Unsatisfactory,,,74,,U
+validation-75,Protocol is vulnerable to replay attacks,validation-75,"sender is checked, no impact",Unsatisfactory,,,75,,U
+validation-76,Function returns excess ETH to incorrect address,findings-11,and it will revert,Satisfactory,,,76,1011,S
+validation-77,"Lack of data validation when users are claiming their art allows malicious user to bypass signature/merkle hash to provide unapproved `ref_`, `artId_` and `imageURI`",validation-77,"seems intended behavior for artId, but imageURI can be forged",Satisfactory,,,77,77,S
+validation-78,"Function `signatureClaim` does not check `art.verificationType`, allowing art with `art.verificationType` set to `""MERKLE""` to be claimed through signature",validation-78,intended behavior,Unsatisfactory,,,78,,U
+validation-79,Rewards distribution for cred would be blocked if it has too many curators,validation-372,unbounded array lead to unbounded gas,Satisfactory,,,79,372,S
+validation-8,"Anyone can trigger a withdrawal of Eth from PhiRewards contract for any account, can cause grieving for account owner",validation-8,intended behavior,Unsatisfactory,,,8,,U
+validation-80,Malicious user can block a user's sell trades by buying shares on their behalf.,validation-619,grief dos,Satisfactory,,,80,619,S
+validation-81,A malicious actor can easily add any elements of any user's credIds array making it possible for the getPositionsForCurator() function to revert,findings-51,visibility,Satisfactory,,,81,1051,S
+validation-82,A malicious actor can easily substract any elements of any user's credIds array making it impossible for the user to sell his shares,findings-51,visibility,Satisfactory,,,82,1051,S
+validation-83,'abi.encodePacked()' causing Hash Collision,validation-83,no impact,Unsatisfactory,,,83,,U
+validation-84,Signatures can be replayed on different chains.,validation-84,"sender is checked, no impact",Unsatisfactory,,,84,,U
+validation-85,Fund get stuck due to improper refunding,findings-11,msg.value is handled incorrectly at this.claim,Satisfactory,,,85,1011,S
+validation-86,lack of access control in `CuratorRewardsDistributor:distribute` allows any user to call distrubute and claim ETH dust.,findings-27,it is not dust,Satisfactory,,,86,1027,S
+validation-87,Block other users from selling Cred shares,validation-619,grief dos,Satisfactory,,,87,619,S
+validation-88,Spamming creating Cred for arbitrary creator by replay signature,validation-88,invalid,Unsatisfactory,,,88,,U
+validation-89,Wrong function visibility allows anyone to add/remove `credId` from any address's list,findings-51,visibility,Satisfactory,,,89,1051,S
+validation-9,"PhiNFT1155 contract derives from non upgradeable base contracts, does not provision for upgrade  ",validation-404,qa?,Satisfactory,,,9,404,S
+validation-90,Can not update protocol fee and art create fee properly,findings-13,incorrect calculation of bp,Satisfactory,,,90,1013,S
+validation-91,Creating art fails because unable to refund excess ether value,findings-11,and it will revert,Satisfactory,,,91,1011,S
+validation-92,Bypass share lock duration to sell Cred share at the first share purchase,findings-25,reentracncy,Satisfactory,,,92,1025,S
+validation-93,DoS in `CuratorRewardsDistributor` due to accumulation of curators with 0 shares in `Cred`,validation-372,unbounded array lead to unbounded gas,Satisfactory,,,93,372,S
+validation-94,Re-entrancy on `claimFromFactory()` function,validation-94,insufficient quality,Unsatisfactory,,,94,,U
+validation-95,`Cred.sol#getPositionsForCurator()` reverts when `_start > 0`.,validation-95,it will revert?,Satisfactory,,,95,95,S
+validation-96,`PhiFactory` does not refund excess `eth` to the user when `createArt`.,findings-11,and it will revert,Satisfactory,,,96,1011,S
+validation-98,"PhiFactory.sol :: createArt() will always revert if a surplus fee is sent, because the contract lacks a receive() or fallback() function to handle the excess ETH.",findings-11,and it will revert,Satisfactory,,,98,1011,S
+validation-99,Attacker will manipulate credIdCounter to skip cred IDs affecting cred management and tracking,validation-99,invalid,Unsatisfactory,,,99,,U
